@@ -1,0 +1,1 @@
+[2020-02-21 10:18:41] Espo.WARNING: E_WARNING: Invalid argument supplied for foreach() {"code":2,"message":"Invalid argument supplied for foreach()","file":"/var/www/html/espocrm/application/Espo/Core/Application.php","line":327,"context":{"crudList":["get","post","put","patch","delete"]}} []
