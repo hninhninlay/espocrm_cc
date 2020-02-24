@@ -18775,6 +18775,25 @@ return array (
           'readOnly' => true,
           'disabled' => true,
         ),
+        'businessCategory' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Retail',
+            1 => 'Whole Sale',
+            2 => 'Both',
+          ),
+          'style' => 
+          array (
+            'Retail' => NULL,
+            'Whole Sale' => NULL,
+            'Both' => NULL,
+          ),
+          'default' => 'Retail',
+          'isCustom' => true,
+        ),
         'middleName' => 
         array (
           'type' => 'varchar',

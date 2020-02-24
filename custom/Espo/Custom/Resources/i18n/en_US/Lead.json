@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "businessCategory": "Category of Business / POS"
+    },
+    "options": {
+        "businessCategory": {
+            "Retail": "Retail",
+            "Whole Sale": "Whole Sale",
+            "Both": "Both"
+        }
+    }
+}

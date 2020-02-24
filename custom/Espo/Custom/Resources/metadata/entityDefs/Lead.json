@@ -1,0 +1,20 @@
+{
+    "fields": {
+        "businessCategory": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Retail",
+                "Whole Sale",
+                "Both"
+            ],
+            "style": {
+                "Retail": null,
+                "Whole Sale": null,
+                "Both": null
+            },
+            "default": "Retail",
+            "isCustom": true
+        }
+    }
+}

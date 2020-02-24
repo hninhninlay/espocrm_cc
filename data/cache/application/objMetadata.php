@@ -15132,6 +15132,22 @@ return (object) [
                     'readOnly' => true,
                     'disabled' => true
                 ],
+                'businessCategory' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Retail',
+                        1 => 'Whole Sale',
+                        2 => 'Both'
+                    ],
+                    'style' => (object) [
+                        'Retail' => NULL,
+                        'Whole Sale' => NULL,
+                        'Both' => NULL
+                    ],
+                    'default' => 'Retail',
+                    'isCustom' => true
+                ],
                 'middleName' => (object) [
                     'type' => 'varchar',
                     'trim' => true,

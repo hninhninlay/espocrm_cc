@@ -4316,6 +4316,7 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       'opportunityAmountCurrency' => 'Opportunity Amount Currency',
       'acceptanceStatusMeetings' => 'Acceptance Status (Meetings)',
       'acceptanceStatusCalls' => 'Acceptance Status (Calls)',
+      'businessCategory' => 'Category of Business / POS',
     ),
     'links' => 
     array (
@@ -4350,6 +4351,12 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
         'Web Site' => 'Web Site',
         'Campaign' => 'Campaign',
         'Other' => 'Other',
+      ),
+      'businessCategory' => 
+      array (
+        'Retail' => 'Retail',
+        'Whole Sale' => 'Whole Sale',
+        'Both' => 'Both',
       ),
     ),
     'presetFilters' => 

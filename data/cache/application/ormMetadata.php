@@ -19291,6 +19291,13 @@ return array (
         'fieldType' => 'bool',
         'default' => false,
       ),
+      'businessCategory' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Retail',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
       'middleName' => 
       array (
         'type' => 'varchar',
