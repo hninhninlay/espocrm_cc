@@ -1,12 +1,259 @@
 {
     "fields": {
-        "businessCategory": "Category of Business / POS"
+        "businessCategory": "Category of Business / POS",
+        "businessType": "Type of Business",
+        "building": "Shop Building / Premise (Select one)",
+        "avgDailySale": "Average Daily Sale (not profit / Income) (Select One)",
+        "businessAtAddress": "Number of Years in Business at this Address (Select One)",
+        "haveBranches": "A) Does Shop have Branches",
+        "haveOtherBranches": "B) How Many Other Branches Have (Select One)",
+        "stafftoManager": "Number of Staff to Manager Business (Select One)",
+        "sellCDSGProduct": "Does Shop Sell Any CDSG Product?",
+        "haveMobileMoneyService": "Does Shop Have Mobile Money Services?",
+        "sellWhichMobileMoney": "Which Mobile Money Service they sell?",
+        "liquidity": "How Much Liquidity / E-money they Invest",
+        "acceptQRcode": "Does POS Accept QR code Payment of Any Mobile Wallet Like",
+        "investLiquidity": "How Much Liquidity / E-money can they invest for Capital Connect",
+        "useWhichBank": "Which Banks Shop use for Business",
+        "referFriends": "Would you Like to Refer your Friend/ Family or Acquaintance for our Capital Connect",
+        "referFriendsText": "If Yes",
+        "startBusiness": "When would Shop like to start our business",
+        "startBusinessDate": "if Both Not",
+        "status": "Lead Status",
+        "nrc": "NRC",
+        "accountType": "Account Type",
+        "companyName": "Company Name",
+        "source": "Lead Source",
+        "annualRevenue": "Annual Revenue",
+        "annualRevenueCurrency": "Annual Revenue (Currency)",
+        "annualRevenueConverted": "Annual Revenue (Converted)",
+        "noofEmp": "No of Employee",
+        "remarks": "Remarks",
+        "division": "Division",
+        "township": "Township",
+        "country": "Country",
+        "detailAddress": "DetailAddress",
+        "billPaymentType": "Bill Payment Type",
+        "settlement": "Settlement (Select One)",
+        "settleMethod": "Settlement Method",
+        "ticketSize": "Average Ticket Size",
+        "customerFees": "Customer Fees",
+        "processFees": "Processing Fees",
+        "annualTransCount": "Annual Transaction Count",
+        "contractSigned": "Contract Signed",
+        "businessLicenseImage": "Business License Image",
+        "companyReg": "Company Registration",
+        "bankDeclaration": "Bank Declaration Form",
+        "bankVerification": "Bank Verification Document",
+        "gPSLocationAttachment": "GPS Location Attachment",
+        "walletAppSurvey": "Wallet App Survey",
+        "phoneNumberss": "Phone Number Screen Shot",
+        "leadID": "LeadID"
     },
     "options": {
         "businessCategory": {
             "Retail": "Retail",
             "Whole Sale": "Whole Sale",
             "Both": "Both"
+        },
+        "businessType": {
+            "Comoputer Sale & Repair": "Comoputer Sale & Repair",
+            "Electrical Goods": "Electrical Goods",
+            "Furniture": "Furniture",
+            "Hardware": "Hardware",
+            "Liquor Shop": "Liquor Shop",
+            "Mom & Pop Shop": "Mom & Pop Shop",
+            "Money Changer": "Money Changer",
+            "Mini Mart": "Mini Mart",
+            "Mobile Handset": "Mobile Handset",
+            "Printing/Photocopy": "Printing/Photocopy",
+            "Pharmacy": "Pharmacy",
+            "Restaurant": "Restaurant",
+            "Tea Shop": "Tea Shop"
+        },
+        "building": {
+            "Owned": "Owned",
+            "Rented": "Rented"
+        },
+        "avgDailySale": {
+            "Less than 100000": "Less than 100000",
+            "Greater than 100000": "Greater than 100000",
+            "Greater than 200000": "Greater than 200000",
+            "Greater than 500000": "Greater than 500000"
+        },
+        "businessAtAddress": {
+            "Less than 1": "Less than 1",
+            "1 - 2": "1 - 2",
+            "2 - 3": "2 - 3",
+            "Greater than 3": "Greater than 3",
+            "Greater than 5": "Greater than 5",
+            "Greater than 10": "Greater than 10"
+        },
+        "haveBranches": {
+            "Yes": "Yes"
+        },
+        "haveOtherBranches": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "Greater than 5": "Greater than 5",
+            "5 Plus": "5 Plus"
+        },
+        "stafftoManager": {
+            "1": "1",
+            "None": "None",
+            "2 - 3": "2 - 3",
+            "3 - 5": "3 - 5",
+            "5 Plus": "5 Plus"
+        },
+        "sellCDSGProduct": {
+            "Premier Coffee": "Premier Coffee",
+            "Armo Fertilizer": "Armo Fertilizer",
+            "Medicine / Pharmacy": "Medicine / Pharmacy"
+        },
+        "haveMobileMoneyService": {
+            "Wave Money": "Wave Money",
+            "True Money": "True Money",
+            "MPT Money": "MPT Money",
+            "KBZ Pay": "KBZ Pay",
+            "AYA Pay": "AYA Pay",
+            "MyTel Pay": "MyTel Pay",
+            "One Pay": "One Pay",
+            "Ooredoo Mpitesan": "Ooredoo Mpitesan",
+            "Ongo": "Ongo",
+            "Near Me": "Near Me",
+            "GET": "GET",
+            "OK $": "OK $"
+        },
+        "sellWhichMobileMoney": {
+            "Wave Money": "Wave Money",
+            "True Money": "True Money",
+            "MPT Money": "MPT Money",
+            "KBZ Pay": "KBZ Pay",
+            "AYA Pay": "AYA Pay",
+            "MyTel Pay": "MyTel Pay",
+            "One Pay": "One Pay",
+            "Ooredoo Mpitesan": "Ooredoo Mpitesan",
+            "Ongo": "Ongo",
+            "Near Me": "Near Me",
+            "GET": "GET",
+            "OK $": "OK $"
+        },
+        "liquidity": {
+            "Less than 2 Lakh": "Less than 2 Lakh",
+            "2 - 3 Lakh": "2 - 3 Lakh",
+            "3 - 5 Lakh": "3 - 5 Lakh",
+            "Greater than 5 Lakh": "Greater than 5 Lakh",
+            "1 Million": "1 Million",
+            "2 Million": "2 Million"
+        },
+        "acceptQRcode": {
+            "KBZ Pay": "KBZ Pay",
+            "One Pay": "One Pay",
+            "Near Me": "Near Me",
+            "Wave Money": "Wave Money",
+            "Visa": "Visa"
+        },
+        "investLiquidity": {
+            "2 Lakh": "2 Lakh",
+            "3 Lakh": "3 Lakh",
+            "5 Lakh": "5 Lakh",
+            "1 Million": "1 Million",
+            "2 Million": "2 Million"
+        },
+        "useWhichBank": {
+            "CB": "CB",
+            "KBZ": "KBZ",
+            "MCB": "MCB",
+            "MAB": "MAB",
+            "YOMA": "YOMA",
+            "AYA": "AYA",
+            "UAB": "UAB"
+        },
+        "referFriends": {
+            "Yes": "Yes",
+            "No": "No"
+        },
+        "startBusiness": {
+            "Immediately": "Immediately",
+            "1 Week": "1 Week"
+        },
+        "status": {
+            "New": "New",
+            "Prospect": "Prospect",
+            "Cancel": "Cancel",
+            "Recycled": "Recycled",
+            "Qualified": "Qualified",
+            "Denied": "Denied",
+            "Contracted": "Contracted"
+        },
+        "accountType": {
+            "Agent": "Agent",
+            "Biller": "Biller",
+            "Merchant": "Merchant",
+            "Super-Agent": "Super-Agent"
+        },
+        "source": {
+            "": "None",
+            "Advertisement": "Advertisement",
+            "Call": "Call",
+            "Company Website": "Company Website",
+            "Email": "Email",
+            "Google": "Google",
+            "Marketing Campaign Event": "Marketing Campaign Event",
+            "Partner": "Partner",
+            "Existing Customer": "Existing Customer",
+            "Public Relations": "Public Relations",
+            "Social Media Marketing": "Social Media Marketing",
+            "Trade Show": "Trade Show",
+            "Other": "Other"
+        },
+        "division": {
+            "Yangon": "Yangon",
+            "Mandalay": "Mandalay",
+            "Napyitaw": "Napyitaw"
+        },
+        "township": {
+            "Alone": "Alone",
+            "Bahan": "Bahan",
+            "Dagon": "Dagon",
+            "Sanchaung": "Sanchaung",
+            "Kyimyindine": "Kyimyindine"
+        },
+        "country": {
+            "Min Ga Yu": "Min Ga Yu",
+            "": ""
+        },
+        "billPaymentType": {
+            "Online": "Online",
+            "Offline": "Offline"
+        },
+        "settlement": {
+            "Daily": "Daily",
+            "Weekly": "Weekly",
+            "Monthly": "Monthly"
+        },
+        "settleMethod": {
+            "Bank": "Bank",
+            "Cash": "Cash",
+            "Mobile Money": "Mobile Money",
+            "Other": "Other"
+        },
+        "customerFees": {
+            "Surcharge Flat": "Surcharge Flat",
+            "Commission Flat": "Commission Flat",
+            "Surcharge Percent": "Surcharge Percent",
+            "Commission Percent": "Commission Percent",
+            "": ""
+        },
+        "processFees": {
+            "Surcharge Flat": "Surcharge Flat",
+            "Commission Flat": "Commission Flat",
+            "Surcharge Percent": "Surcharge Percent",
+            "Commission Percent": "Commission Percent",
+            "": ""
         }
     }
 }

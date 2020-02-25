@@ -1,0 +1,1 @@
+[2020-02-25 03:44:33] Espo.ERROR: (403) GET /api/v1/Document?select=name&maxSize=5&offset=0&orderBy=&order=; line: 127, file: /var/www/html/espocrm/application/Espo/Core/Controllers/Record.php [] []

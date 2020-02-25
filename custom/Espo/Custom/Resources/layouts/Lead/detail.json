@@ -1,0 +1,267 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "leadID"
+                },
+                {
+                    "name": "accountType"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "accountName"
+                }
+            ],
+            [
+                {
+                    "name": "nrc"
+                },
+                {
+                    "name": "title"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "website"
+                },
+                {
+                    "name": "companyName"
+                }
+            ],
+            [
+                {
+                    "name": "division"
+                },
+                {
+                    "name": "township"
+                }
+            ],
+            [
+                {
+                    "name": "country"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "detailAddress"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "businessCategory"
+                },
+                {
+                    "name": "businessType"
+                }
+            ],
+            [
+                {
+                    "name": "building"
+                },
+                {
+                    "name": "avgDailySale"
+                }
+            ],
+            [
+                {
+                    "name": "businessAtAddress"
+                },
+                {
+                    "name": "sellCDSGProduct"
+                }
+            ],
+            [
+                {
+                    "name": "stafftoManager"
+                }
+            ],
+            [
+                {
+                    "name": "haveBranches"
+                },
+                {
+                    "name": "haveOtherBranches"
+                }
+            ],
+            [
+                {
+                    "name": "haveMobileMoneyService"
+                }
+            ],
+            [
+                {
+                    "name": "sellWhichMobileMoney"
+                }
+            ],
+            [
+                {
+                    "name": "liquidity"
+                }
+            ],
+            [
+                {
+                    "name": "acceptQRcode"
+                }
+            ],
+            [
+                {
+                    "name": "investLiquidity"
+                }
+            ],
+            [
+                {
+                    "name": "useWhichBank"
+                }
+            ],
+            [
+                {
+                    "name": "referFriends"
+                }
+            ],
+            [
+                {
+                    "name": "referFriendsText"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "startBusiness"
+                }
+            ],
+            [
+                {
+                    "name": "startBusinessDate"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "dynamicLogicVisible": null,
+        "customLabel": "Survey"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "source"
+                }
+            ],
+            [
+                {
+                    "name": "annualRevenue"
+                },
+                {
+                    "name": "noofEmp"
+                }
+            ],
+            [
+                {
+                    "name": "remarks"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "billPaymentType"
+                },
+                {
+                    "name": "ticketSize"
+                }
+            ],
+            [
+                {
+                    "name": "settlement"
+                },
+                {
+                    "name": "settleMethod"
+                }
+            ],
+            [
+                {
+                    "name": "customerFees"
+                },
+                {
+                    "name": "processFees"
+                }
+            ],
+            [
+                {
+                    "name": "annualTransCount"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "dynamicLogicVisible": null,
+        "customLabel": "Biller Information"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "contractSigned"
+                },
+                {
+                    "name": "businessLicenseImage"
+                }
+            ],
+            [
+                {
+                    "name": "companyReg"
+                },
+                {
+                    "name": "bankDeclaration"
+                }
+            ],
+            [
+                {
+                    "name": "bankVerification"
+                },
+                {
+                    "name": "gPSLocationAttachment"
+                }
+            ],
+            [
+                {
+                    "name": "phoneNumberss"
+                },
+                {
+                    "name": "walletAppSurvey"
+                }
+            ]
+        ],
+        "style": "default",
+        "dynamicLogicVisible": null,
+        "customLabel": "Attachments"
+    }
+]

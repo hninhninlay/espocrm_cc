@@ -19298,6 +19298,248 @@ return array (
         'fieldType' => 'varchar',
         'len' => 255,
       ),
+      'businessType' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Comoputer Sale & Repair',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'building' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'avgDailySale' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'businessAtAddress' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'haveBranches' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'haveOtherBranches' => 
+      array (
+        'type' => 'varchar',
+        'default' => '1',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'stafftoManager' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'sellCDSGProduct' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'haveMobileMoneyService' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'sellWhichMobileMoney' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'liquidity' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Less than 2 Lakh',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'acceptQRcode' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'investLiquidity' => 
+      array (
+        'type' => 'varchar',
+        'default' => '2 Lakh',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'useWhichBank' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'referFriends' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'referFriendsText' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'startBusiness' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'startBusinessDate' => 
+      array (
+        'type' => 'date',
+        'notNull' => false,
+        'fieldType' => 'date',
+      ),
+      'nrc' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'accountType' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Agent',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'companyName' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'annualRevenue' => 
+      array (
+        'type' => 'float',
+        'fieldType' => 'currency',
+        'orderBy' => 
+        array (
+          'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate {direction}',
+          'leftJoins' => 
+          array (
+            0 => 
+            array (
+              0 => 'Currency',
+              1 => 'annualRevenueCurrencyRate',
+              2 => 
+              array (
+                'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+              ),
+            ),
+          ),
+        ),
+        'attributeRole' => 'value',
+      ),
+      'noofEmp' => 
+      array (
+        'type' => 'int',
+        'fieldType' => 'int',
+        'len' => 11,
+      ),
+      'remarks' => 
+      array (
+        'type' => 'text',
+        'fieldType' => 'text',
+      ),
+      'division' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Yangon',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'township' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Alone',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'country' => 
+      array (
+        'type' => 'varchar',
+        'default' => '',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'detailAddress' => 
+      array (
+        'type' => 'text',
+        'fieldType' => 'text',
+      ),
+      'billPaymentType' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'settlement' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'settleMethod' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'ticketSize' => 
+      array (
+        'type' => 'int',
+        'fieldType' => 'int',
+        'len' => 11,
+      ),
+      'customerFees' => 
+      array (
+        'type' => 'varchar',
+        'default' => '',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'processFees' => 
+      array (
+        'type' => 'varchar',
+        'default' => '',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'annualTransCount' => 
+      array (
+        'type' => 'int',
+        'fieldType' => 'int',
+        'len' => 11,
+      ),
+      'leadID' => 
+      array (
+        'type' => 'varchar',
+        'len' => 36,
+        'notNull' => false,
+        'unique' => false,
+        'fieldType' => 'varchar',
+      ),
       'middleName' => 
       array (
         'type' => 'varchar',
@@ -19407,6 +19649,13 @@ return array (
         ),
         'orderBy' => 'phoneNumbers.opt_out {direction}',
         'default' => false,
+      ),
+      'annualRevenueCurrency' => 
+      array (
+        'type' => 'varchar',
+        'len' => 6,
+        'fieldType' => 'currency',
+        'attributeRole' => 'currency',
       ),
       'opportunityAmountConverted' => 
       array (
@@ -19886,6 +20135,364 @@ return array (
         'attributeRole' => 'name',
         'fieldType' => 'link',
       ),
+      'annualRevenueConverted' => 
+      array (
+        'type' => 'float',
+        'select' => 
+        array (
+          'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate',
+          'leftJoins' => 
+          array (
+            0 => 
+            array (
+              0 => 'Currency',
+              1 => 'annualRevenueCurrencyRate',
+              2 => 
+              array (
+                'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+              ),
+            ),
+          ),
+        ),
+        'selectForeign' => 
+        array (
+          'sql' => '{alias}.annual_revenue * annualRevenueCurrencyRateLeadForeign.rate',
+          'leftJoins' => 
+          array (
+            0 => 
+            array (
+              0 => 'Currency',
+              1 => 'annualRevenueCurrencyRateLeadForeign',
+              2 => 
+              array (
+                'annualRevenueCurrencyRateLeadForeign.id:' => '{alias}.annualRevenueCurrency',
+              ),
+            ),
+          ),
+        ),
+        'where' => 
+        array (
+          '=' => 
+          array (
+            'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate = {value}',
+            'leftJoins' => 
+            array (
+              0 => 
+              array (
+                0 => 'Currency',
+                1 => 'annualRevenueCurrencyRate',
+                2 => 
+                array (
+                  'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+                ),
+              ),
+            ),
+          ),
+          '>' => 
+          array (
+            'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate > {value}',
+            'leftJoins' => 
+            array (
+              0 => 
+              array (
+                0 => 'Currency',
+                1 => 'annualRevenueCurrencyRate',
+                2 => 
+                array (
+                  'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+                ),
+              ),
+            ),
+          ),
+          '<' => 
+          array (
+            'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate < {value}',
+            'leftJoins' => 
+            array (
+              0 => 
+              array (
+                0 => 'Currency',
+                1 => 'annualRevenueCurrencyRate',
+                2 => 
+                array (
+                  'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+                ),
+              ),
+            ),
+          ),
+          '>=' => 
+          array (
+            'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate >= {value}',
+            'leftJoins' => 
+            array (
+              0 => 
+              array (
+                0 => 'Currency',
+                1 => 'annualRevenueCurrencyRate',
+                2 => 
+                array (
+                  'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+                ),
+              ),
+            ),
+          ),
+          '<=' => 
+          array (
+            'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate <= {value}',
+            'leftJoins' => 
+            array (
+              0 => 
+              array (
+                0 => 'Currency',
+                1 => 'annualRevenueCurrencyRate',
+                2 => 
+                array (
+                  'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+                ),
+              ),
+            ),
+          ),
+          '<>' => 
+          array (
+            'sql' => 'lead.annual_revenue * annualRevenueCurrencyRate.rate <> {value}',
+            'leftJoins' => 
+            array (
+              0 => 
+              array (
+                0 => 'Currency',
+                1 => 'annualRevenueCurrencyRate',
+                2 => 
+                array (
+                  'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+                ),
+              ),
+            ),
+          ),
+          'IS NULL' => 
+          array (
+            'sql' => 'lead.annual_revenue IS NULL',
+          ),
+          'IS NOT NULL' => 
+          array (
+            'sql' => 'lead.annual_revenue IS NOT NULL',
+          ),
+        ),
+        'notStorable' => true,
+        'orderBy' => 
+        array (
+          'sql' => 'annualRevenueConverted {direction}',
+          'leftJoins' => 
+          array (
+            0 => 
+            array (
+              0 => 'Currency',
+              1 => 'annualRevenueCurrencyRate',
+              2 => 
+              array (
+                'annualRevenueCurrencyRate.id:' => 'annualRevenueCurrency',
+              ),
+            ),
+          ),
+        ),
+        'attributeRole' => 'valueConverted',
+        'fieldType' => 'currency',
+      ),
+      'contractSignedIds' => 
+      array (
+        'type' => 'jsonArray',
+        'notStorable' => true,
+        'orderBy' => 
+        array (
+          0 => 
+          array (
+            0 => 'createdAt',
+            1 => 'ASC',
+          ),
+          1 => 
+          array (
+            0 => 'name',
+            1 => 'ASC',
+          ),
+        ),
+        'isLinkMultipleIdList' => true,
+        'relation' => 'contractSigned',
+        'isLinkStub' => false,
+      ),
+      'contractSignedNames' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+        'isLinkMultipleNameMap' => true,
+        'isLinkStub' => false,
+      ),
+      'businessLicenseImageId' => 
+      array (
+        'dbType' => 'varchar',
+        'len' => 24,
+        'type' => 'foreignId',
+        'index' => false,
+        'notNull' => false,
+      ),
+      'businessLicenseImageName' => 
+      array (
+        'type' => 'foreign',
+        'relation' => 'businessLicenseImage',
+        'foreign' => 'name',
+      ),
+      'companyRegIds' => 
+      array (
+        'type' => 'jsonArray',
+        'notStorable' => true,
+        'orderBy' => 
+        array (
+          0 => 
+          array (
+            0 => 'createdAt',
+            1 => 'ASC',
+          ),
+          1 => 
+          array (
+            0 => 'name',
+            1 => 'ASC',
+          ),
+        ),
+        'isLinkMultipleIdList' => true,
+        'relation' => 'companyReg',
+        'isLinkStub' => false,
+      ),
+      'companyRegNames' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+        'isLinkMultipleNameMap' => true,
+        'isLinkStub' => false,
+      ),
+      'bankDeclarationIds' => 
+      array (
+        'type' => 'jsonArray',
+        'notStorable' => true,
+        'orderBy' => 
+        array (
+          0 => 
+          array (
+            0 => 'createdAt',
+            1 => 'ASC',
+          ),
+          1 => 
+          array (
+            0 => 'name',
+            1 => 'ASC',
+          ),
+        ),
+        'isLinkMultipleIdList' => true,
+        'relation' => 'bankDeclaration',
+        'isLinkStub' => false,
+      ),
+      'bankDeclarationNames' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+        'isLinkMultipleNameMap' => true,
+        'isLinkStub' => false,
+      ),
+      'bankVerificationIds' => 
+      array (
+        'type' => 'jsonArray',
+        'notStorable' => true,
+        'orderBy' => 
+        array (
+          0 => 
+          array (
+            0 => 'createdAt',
+            1 => 'ASC',
+          ),
+          1 => 
+          array (
+            0 => 'name',
+            1 => 'ASC',
+          ),
+        ),
+        'isLinkMultipleIdList' => true,
+        'relation' => 'bankVerification',
+        'isLinkStub' => false,
+      ),
+      'bankVerificationNames' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+        'isLinkMultipleNameMap' => true,
+        'isLinkStub' => false,
+      ),
+      'gPSLocationAttachmentIds' => 
+      array (
+        'type' => 'jsonArray',
+        'notStorable' => true,
+        'orderBy' => 
+        array (
+          0 => 
+          array (
+            0 => 'createdAt',
+            1 => 'ASC',
+          ),
+          1 => 
+          array (
+            0 => 'name',
+            1 => 'ASC',
+          ),
+        ),
+        'isLinkMultipleIdList' => true,
+        'relation' => 'gPSLocationAttachment',
+        'isLinkStub' => false,
+      ),
+      'gPSLocationAttachmentNames' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+        'isLinkMultipleNameMap' => true,
+        'isLinkStub' => false,
+      ),
+      'walletAppSurveyIds' => 
+      array (
+        'type' => 'jsonArray',
+        'notStorable' => true,
+        'orderBy' => 
+        array (
+          0 => 
+          array (
+            0 => 'createdAt',
+            1 => 'ASC',
+          ),
+          1 => 
+          array (
+            0 => 'name',
+            1 => 'ASC',
+          ),
+        ),
+        'isLinkMultipleIdList' => true,
+        'relation' => 'walletAppSurvey',
+        'isLinkStub' => false,
+      ),
+      'walletAppSurveyNames' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+        'isLinkMultipleNameMap' => true,
+        'isLinkStub' => false,
+      ),
+      'phoneNumberssId' => 
+      array (
+        'dbType' => 'varchar',
+        'len' => 24,
+        'type' => 'foreignId',
+        'index' => false,
+        'notNull' => false,
+      ),
+      'phoneNumberssName' => 
+      array (
+        'type' => 'foreign',
+        'relation' => 'phoneNumberss',
+        'foreign' => 'name',
+      ),
       'isFollowed' => 
       array (
         'type' => 'varchar',
@@ -19988,6 +20595,36 @@ return array (
         'notStorable' => true,
         'isLinkStub' => true,
       ),
+      'contractSignedTypes' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+      ),
+      'companyRegTypes' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+      ),
+      'bankDeclarationTypes' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+      ),
+      'bankVerificationTypes' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+      ),
+      'gPSLocationAttachmentTypes' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+      ),
+      'walletAppSurveyTypes' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+      ),
     ),
     'relations' => 
     array (
@@ -20046,6 +20683,22 @@ return array (
             'default' => false,
           ),
         ),
+      ),
+      'businessLicenseImage' => 
+      array (
+        'type' => 'belongsTo',
+        'entity' => 'Attachment',
+        'key' => 'businessLicenseImageId',
+        'foreignKey' => 'id',
+        'foreign' => NULL,
+      ),
+      'phoneNumberss' => 
+      array (
+        'type' => 'belongsTo',
+        'entity' => 'Attachment',
+        'key' => 'phoneNumberssId',
+        'foreignKey' => 'id',
+        'foreign' => NULL,
       ),
       'documents' => 
       array (
@@ -20237,6 +20890,144 @@ return array (
         'key' => 'createdById',
         'foreignKey' => 'id',
         'foreign' => NULL,
+      ),
+      'contractSigned' => 
+      array (
+        'type' => 'hasChildren',
+        'entity' => 'Attachment',
+        'foreignKey' => 'parentId',
+        'foreignType' => 'parentType',
+        'foreign' => 'parent',
+        'conditions' => 
+        array (
+          'OR' => 
+          array (
+            0 => 
+            array (
+              'field' => NULL,
+            ),
+            1 => 
+            array (
+              'field' => 'contractSigned',
+            ),
+          ),
+        ),
+        'relationName' => 'attachments',
+      ),
+      'companyReg' => 
+      array (
+        'type' => 'hasChildren',
+        'entity' => 'Attachment',
+        'foreignKey' => 'parentId',
+        'foreignType' => 'parentType',
+        'foreign' => 'parent',
+        'conditions' => 
+        array (
+          'OR' => 
+          array (
+            0 => 
+            array (
+              'field' => NULL,
+            ),
+            1 => 
+            array (
+              'field' => 'companyReg',
+            ),
+          ),
+        ),
+        'relationName' => 'attachments',
+      ),
+      'bankDeclaration' => 
+      array (
+        'type' => 'hasChildren',
+        'entity' => 'Attachment',
+        'foreignKey' => 'parentId',
+        'foreignType' => 'parentType',
+        'foreign' => 'parent',
+        'conditions' => 
+        array (
+          'OR' => 
+          array (
+            0 => 
+            array (
+              'field' => NULL,
+            ),
+            1 => 
+            array (
+              'field' => 'bankDeclaration',
+            ),
+          ),
+        ),
+        'relationName' => 'attachments',
+      ),
+      'bankVerification' => 
+      array (
+        'type' => 'hasChildren',
+        'entity' => 'Attachment',
+        'foreignKey' => 'parentId',
+        'foreignType' => 'parentType',
+        'foreign' => 'parent',
+        'conditions' => 
+        array (
+          'OR' => 
+          array (
+            0 => 
+            array (
+              'field' => NULL,
+            ),
+            1 => 
+            array (
+              'field' => 'bankVerification',
+            ),
+          ),
+        ),
+        'relationName' => 'attachments',
+      ),
+      'gPSLocationAttachment' => 
+      array (
+        'type' => 'hasChildren',
+        'entity' => 'Attachment',
+        'foreignKey' => 'parentId',
+        'foreignType' => 'parentType',
+        'foreign' => 'parent',
+        'conditions' => 
+        array (
+          'OR' => 
+          array (
+            0 => 
+            array (
+              'field' => NULL,
+            ),
+            1 => 
+            array (
+              'field' => 'gPSLocationAttachment',
+            ),
+          ),
+        ),
+        'relationName' => 'attachments',
+      ),
+      'walletAppSurvey' => 
+      array (
+        'type' => 'hasChildren',
+        'entity' => 'Attachment',
+        'foreignKey' => 'parentId',
+        'foreignType' => 'parentType',
+        'foreign' => 'parent',
+        'conditions' => 
+        array (
+          'OR' => 
+          array (
+            0 => 
+            array (
+              'field' => NULL,
+            ),
+            1 => 
+            array (
+              'field' => 'walletAppSurvey',
+            ),
+          ),
+        ),
+        'relationName' => 'attachments',
       ),
     ),
     'indexes' => 

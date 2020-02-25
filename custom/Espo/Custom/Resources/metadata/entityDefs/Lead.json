@@ -15,6 +15,643 @@
             },
             "default": "Retail",
             "isCustom": true
+        },
+        "businessType": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Comoputer Sale & Repair",
+                "Electrical Goods",
+                "Furniture",
+                "Hardware",
+                "Liquor Shop",
+                "Mom & Pop Shop",
+                "Money Changer",
+                "Mini Mart",
+                "Mobile Handset",
+                "Printing/Photocopy",
+                "Pharmacy",
+                "Restaurant",
+                "Tea Shop"
+            ],
+            "style": {
+                "Comoputer Sale & Repair": null,
+                "Electrical Goods": null,
+                "Furniture": null,
+                "Hardware": null,
+                "Liquor Shop": null,
+                "Mom & Pop Shop": null,
+                "Money Changer": null,
+                "Mini Mart": null,
+                "Mobile Handset": null,
+                "Printing/Photocopy": null,
+                "Pharmacy": null,
+                "Restaurant": null,
+                "Tea Shop": null
+            },
+            "default": "Comoputer Sale & Repair",
+            "isCustom": true
+        },
+        "building": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "required": true,
+            "maxCount": 1,
+            "options": [
+                "Owned",
+                "Rented"
+            ],
+            "isCustom": true
+        },
+        "avgDailySale": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "required": true,
+            "options": [
+                "Less than 100000",
+                "Greater than 100000",
+                "Greater than 200000",
+                "Greater than 500000"
+            ],
+            "maxCount": 1,
+            "isCustom": true
+        },
+        "businessAtAddress": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "required": true,
+            "maxCount": 1,
+            "options": [
+                "Less than 1",
+                "1 - 2",
+                "2 - 3",
+                "Greater than 3",
+                "Greater than 5",
+                "Greater than 10"
+            ],
+            "isCustom": true
+        },
+        "haveBranches": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Yes"
+            ],
+            "isCustom": true
+        },
+        "haveOtherBranches": {
+            "type": "enum",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "5 Plus"
+            ],
+            "style": {
+                "1": null,
+                "2": null,
+                "3": null,
+                "4": null,
+                "5": null,
+                "5 Plus": null
+            },
+            "default": "1",
+            "isCustom": true
+        },
+        "stafftoManager": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "required": true,
+            "options": [
+                "None",
+                "1",
+                "2 - 3",
+                "3 - 5",
+                "5 Plus"
+            ],
+            "maxCount": 1,
+            "isCustom": true
+        },
+        "sellCDSGProduct": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Premier Coffee",
+                "Armo Fertilizer",
+                "Medicine / Pharmacy"
+            ],
+            "isCustom": true
+        },
+        "haveMobileMoneyService": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Wave Money",
+                "True Money",
+                "MPT Money",
+                "KBZ Pay",
+                "AYA Pay",
+                "MyTel Pay",
+                "One Pay",
+                "Ooredoo Mpitesan",
+                "Ongo",
+                "Near Me",
+                "GET",
+                "OK $"
+            ],
+            "isCustom": true
+        },
+        "sellWhichMobileMoney": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Wave Money",
+                "True Money",
+                "MPT Money",
+                "KBZ Pay",
+                "AYA Pay",
+                "MyTel Pay",
+                "One Pay",
+                "Ooredoo Mpitesan",
+                "Ongo",
+                "Near Me",
+                "GET",
+                "OK $"
+            ],
+            "isCustom": true
+        },
+        "liquidity": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Less than 2 Lakh",
+                "2 - 3 Lakh",
+                "3 - 5 Lakh",
+                "Greater than 5 Lakh",
+                "1 Million",
+                "2 Million"
+            ],
+            "style": {
+                "Less than 2 Lakh": null,
+                "2 - 3 Lakh": null,
+                "3 - 5 Lakh": null,
+                "Greater than 5 Lakh": null,
+                "1 Million": null,
+                "2 Million": null
+            },
+            "default": "Less than 2 Lakh",
+            "isCustom": true
+        },
+        "acceptQRcode": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "required": true,
+            "options": [
+                "KBZ Pay",
+                "One Pay",
+                "Near Me",
+                "Wave Money",
+                "Visa"
+            ],
+            "isCustom": true
+        },
+        "investLiquidity": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "2 Lakh",
+                "3 Lakh",
+                "5 Lakh",
+                "1 Million",
+                "2 Million"
+            ],
+            "style": {
+                "2 Lakh": null,
+                "3 Lakh": null,
+                "5 Lakh": null,
+                "1 Million": null,
+                "2 Million": null
+            },
+            "default": "2 Lakh",
+            "isCustom": true
+        },
+        "useWhichBank": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "CB",
+                "KBZ",
+                "MCB",
+                "MAB",
+                "YOMA",
+                "AYA",
+                "UAB"
+            ],
+            "isCustom": true
+        },
+        "referFriends": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "maxCount": 1,
+            "isCustom": true
+        },
+        "referFriendsText": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "startBusiness": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "maxCount": 1,
+            "options": [
+                "Immediately",
+                "1 Week"
+            ],
+            "isCustom": true
+        },
+        "startBusinessDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "status": {
+            "options": [
+                "New",
+                "Prospect",
+                "Cancel",
+                "Recycled",
+                "Qualified",
+                "Denied",
+                "Contracted"
+            ],
+            "style": {
+                "New": "primary",
+                "Prospect": null,
+                "Cancel": null,
+                "Recycled": "danger",
+                "Qualified": "success",
+                "Denied": null,
+                "Contracted": "success"
+            },
+            "notActualOptions": [
+                "Cancel",
+                "Denied"
+            ],
+            "required": true
+        },
+        "nrc": {
+            "type": "varchar",
+            "required": true,
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "accountType": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Agent",
+                "Biller",
+                "Merchant",
+                "Super-Agent"
+            ],
+            "style": {
+                "Agent": null,
+                "Biller": null,
+                "Merchant": null,
+                "Super-Agent": null
+            },
+            "default": "Agent",
+            "isCustom": true
+        },
+        "companyName": {
+            "type": "varchar",
+            "required": true,
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "source": {
+            "options": [
+                "",
+                "Advertisement",
+                "Call",
+                "Company Website",
+                "Email",
+                "Google",
+                "Marketing Campaign Event",
+                "Partner",
+                "Existing Customer",
+                "Public Relations",
+                "Social Media Marketing",
+                "Trade Show",
+                "Other"
+            ],
+            "style": {
+                "": null,
+                "Advertisement": null,
+                "Call": null,
+                "Company Website": null,
+                "Email": null,
+                "Google": null,
+                "Marketing Campaign Event": null,
+                "Partner": null,
+                "Existing Customer": null,
+                "Public Relations": null,
+                "Social Media Marketing": null,
+                "Trade Show": null,
+                "Other": null
+            },
+            "required": true
+        },
+        "annualRevenue": {
+            "type": "currency",
+            "isCustom": true
+        },
+        "noofEmp": {
+            "type": "int",
+            "isCustom": true
+        },
+        "remarks": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "division": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Yangon",
+                "Mandalay",
+                "Napyitaw"
+            ],
+            "style": {
+                "Yangon": null,
+                "Mandalay": null,
+                "Napyitaw": null
+            },
+            "default": "Yangon",
+            "isCustom": true
+        },
+        "township": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Alone",
+                "Bahan",
+                "Dagon",
+                "Sanchaung",
+                "Kyimyindine"
+            ],
+            "style": {
+                "Alone": null,
+                "Bahan": null,
+                "Dagon": null,
+                "Sanchaung": null,
+                "Kyimyindine": null
+            },
+            "default": "Alone",
+            "isCustom": true
+        },
+        "country": {
+            "type": "enum",
+            "options": [
+                "",
+                "Min Ga Yu"
+            ],
+            "style": {
+                "": null,
+                "Min Ga Yu": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "detailAddress": {
+            "type": "text",
+            "required": true,
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "billPaymentType": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "maxCount": 1,
+            "options": [
+                "Online",
+                "Offline"
+            ],
+            "isCustom": true
+        },
+        "settlement": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "maxCount": 1,
+            "options": [
+                "Daily",
+                "Weekly",
+                "Monthly"
+            ],
+            "isCustom": true
+        },
+        "settleMethod": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Bank",
+                "Cash",
+                "Mobile Money",
+                "Other"
+            ],
+            "maxCount": 1,
+            "isCustom": true
+        },
+        "ticketSize": {
+            "type": "int",
+            "isCustom": true
+        },
+        "customerFees": {
+            "type": "enum",
+            "options": [
+                "",
+                "Surcharge Flat",
+                "Commission Flat",
+                "Surcharge Percent",
+                "Commission Percent"
+            ],
+            "style": {
+                "": null,
+                "Surcharge Flat": null,
+                "Commission Flat": null,
+                "Surcharge Percent": null,
+                "Commission Percent": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "processFees": {
+            "type": "enum",
+            "options": [
+                "",
+                "Surcharge Flat",
+                "Commission Flat",
+                "Surcharge Percent",
+                "Commission Percent"
+            ],
+            "style": {
+                "": null,
+                "Surcharge Flat": null,
+                "Commission Flat": null,
+                "Surcharge Percent": null,
+                "Commission Percent": null
+            },
+            "default": "",
+            "isCustom": true
+        },
+        "annualTransCount": {
+            "type": "int",
+            "isCustom": true
+        },
+        "contractSigned": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "sourceList": [],
+            "accept": [],
+            "isCustom": true
+        },
+        "businessLicenseImage": {
+            "type": "image",
+            "previewSize": "small",
+            "isCustom": true
+        },
+        "companyReg": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "sourceList": [
+                "Document"
+            ],
+            "accept": [],
+            "isCustom": true
+        },
+        "bankDeclaration": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "sourceList": [
+                "Document"
+            ],
+            "accept": [],
+            "isCustom": true
+        },
+        "bankVerification": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "sourceList": [
+                "Document"
+            ],
+            "accept": [],
+            "isCustom": true
+        },
+        "gPSLocationAttachment": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "sourceList": [],
+            "accept": [],
+            "isCustom": true
+        },
+        "walletAppSurvey": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "sourceList": [
+                "Document"
+            ],
+            "accept": [],
+            "isCustom": true
+        },
+        "phoneNumberss": {
+            "type": "image",
+            "previewSize": "small",
+            "isCustom": true
+        },
+        "leadID": {
+            "type": "number",
+            "len": 36,
+            "notNull": false,
+            "unique": false,
+            "nextNumber": 1,
+            "padLength": 10,
+            "prefix": "L",
+            "isCustom": true
+        }
+    },
+    "links": {
+        "contractSigned": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "disabled": true
+        },
+        "businessLicenseImage": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
+        },
+        "companyReg": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "disabled": true
+        },
+        "bankDeclaration": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "disabled": true
+        },
+        "bankVerification": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "disabled": true
+        },
+        "gPSLocationAttachment": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "disabled": true
+        },
+        "walletAppSurvey": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "disabled": true
+        },
+        "phoneNumberss": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "disabled": true
         }
     }
 }

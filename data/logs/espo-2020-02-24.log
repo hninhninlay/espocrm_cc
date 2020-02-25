@@ -1,0 +1,3 @@
+[2020-02-24 10:12:31] Espo.ERROR: (409) Field [address] exists in Lead; POST /api/v1/Admin/fieldManager/Lead; line: 116, file: /var/www/html/espocrm/application/Espo/Core/Utils/FieldManager.php [] []
+[2020-02-24 10:19:45] Espo.WARNING: E_WARNING: Invalid argument supplied for foreach() {"code":2,"message":"Invalid argument supplied for foreach()","file":"/var/www/html/espocrm/application/Espo/Core/Application.php","line":327,"context":{"crudList":["get","post","put","patch","delete"]}} []
+[2020-02-24 10:22:07] Espo.ERROR: (409) Field [contractSigned] exists in Lead; POST /api/v1/Admin/fieldManager/Lead; line: 116, file: /var/www/html/espocrm/application/Espo/Core/Utils/FieldManager.php [] []

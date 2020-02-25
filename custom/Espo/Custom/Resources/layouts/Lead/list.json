@@ -1,0 +1,34 @@
+[
+    {
+        "name": "leadID"
+    },
+    {
+        "name": "name",
+        "link": "true"
+    },
+    {
+        "name": "businessType"
+    },
+    {
+        "name": "status",
+        "width": 15
+    },
+    {
+        "name": "accountType"
+    },
+    {
+        "name": "nrc"
+    },
+    {
+        "name": "companyName"
+    },
+    {
+        "name": "emailAddress",
+        "width": 20,
+        "notSortable": true
+    },
+    {
+        "name": "createdAt",
+        "width": 13
+    }
+]

@@ -1,0 +1,161 @@
+{
+    "dynamicLogic": {
+        "fields": {
+            "haveOtherBranches": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "haveBranches",
+                            "value": "Yes"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "haveBranches",
+                            "value": "Yes"
+                        }
+                    ]
+                }
+            },
+            "haveBranches": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "stafftoManager",
+                            "value": "5 Plus"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "stafftoManager",
+                            "value": "5 Plus"
+                        }
+                    ]
+                }
+            },
+            "referFriendsText": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "referFriends",
+                            "value": "Yes"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "has",
+                            "attribute": "referFriends",
+                            "value": "Yes"
+                        }
+                    ]
+                }
+            },
+            "startBusinessDate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "startBusiness"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "startBusiness"
+                        }
+                    ]
+                }
+            },
+            "billPaymentType": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "settlement": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "settleMethod": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "ticketSize": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "customerFees": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "processFees": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "annualTransCount": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

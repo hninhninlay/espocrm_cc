@@ -4646,6 +4646,161 @@ return (object) [
                                 ]
                             ]
                         ]
+                    ],
+                    'haveOtherBranches' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'has',
+                                    'attribute' => 'haveBranches',
+                                    'value' => 'Yes'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'has',
+                                    'attribute' => 'haveBranches',
+                                    'value' => 'Yes'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'haveBranches' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'has',
+                                    'attribute' => 'stafftoManager',
+                                    'value' => '5 Plus'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'has',
+                                    'attribute' => 'stafftoManager',
+                                    'value' => '5 Plus'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'referFriendsText' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'has',
+                                    'attribute' => 'referFriends',
+                                    'value' => 'Yes'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'has',
+                                    'attribute' => 'referFriends',
+                                    'value' => 'Yes'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'startBusinessDate' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isEmpty',
+                                    'attribute' => 'startBusiness'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isEmpty',
+                                    'attribute' => 'startBusiness'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'billPaymentType' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accountType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'settlement' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accountType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'settleMethod' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accountType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'ticketSize' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accountType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'customerFees' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accountType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'processFees' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accountType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'annualTransCount' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accountType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
                     ]
                 ],
                 'panels' => (object) [
@@ -14906,17 +15061,24 @@ return (object) [
                     'type' => 'enum',
                     'options' => [
                         0 => 'New',
-                        1 => 'Assigned',
-                        2 => 'In Process',
-                        3 => 'Converted',
-                        4 => 'Recycled',
-                        5 => 'Dead'
+                        1 => 'Prospect',
+                        2 => 'Cancel',
+                        3 => 'Recycled',
+                        4 => 'Qualified',
+                        5 => 'Denied',
+                        6 => 'Contracted'
                     ],
                     'default' => 'New',
                     'style' => (object) [
                         'Converted' => 'success',
                         'Recycled' => 'danger',
-                        'Dead' => 'danger'
+                        'Dead' => 'danger',
+                        'New' => 'primary',
+                        'Prospect' => NULL,
+                        'Cancel' => NULL,
+                        'Qualified' => 'success',
+                        'Denied' => NULL,
+                        'Contracted' => 'success'
                     ],
                     'audited' => true,
                     'fieldManagerAdditionalParamList' => [
@@ -14926,25 +15088,45 @@ return (object) [
                         ]
                     ],
                     'notActualOptions' => [
-                        0 => 'Converted',
-                        1 => 'Recycled',
-                        2 => 'Dead'
-                    ]
+                        0 => 'Cancel',
+                        1 => 'Denied'
+                    ],
+                    'required' => true
                 ],
                 'source' => (object) [
                     'type' => 'enum',
                     'options' => [
                         0 => '',
-                        1 => 'Call',
-                        2 => 'Email',
-                        3 => 'Existing Customer',
-                        4 => 'Partner',
-                        5 => 'Public Relations',
-                        6 => 'Web Site',
-                        7 => 'Campaign',
-                        8 => 'Other'
+                        1 => 'Advertisement',
+                        2 => 'Call',
+                        3 => 'Company Website',
+                        4 => 'Email',
+                        5 => 'Google',
+                        6 => 'Marketing Campaign Event',
+                        7 => 'Partner',
+                        8 => 'Existing Customer',
+                        9 => 'Public Relations',
+                        10 => 'Social Media Marketing',
+                        11 => 'Trade Show',
+                        12 => 'Other'
                     ],
-                    'default' => ''
+                    'default' => '',
+                    'style' => (object) [
+                        '' => NULL,
+                        'Advertisement' => NULL,
+                        'Call' => NULL,
+                        'Company Website' => NULL,
+                        'Email' => NULL,
+                        'Google' => NULL,
+                        'Marketing Campaign Event' => NULL,
+                        'Partner' => NULL,
+                        'Existing Customer' => NULL,
+                        'Public Relations' => NULL,
+                        'Social Media Marketing' => NULL,
+                        'Trade Show' => NULL,
+                        'Other' => NULL
+                    ],
+                    'required' => true
                 ],
                 'industry' => (object) [
                     'type' => 'enum',
@@ -15148,6 +15330,545 @@ return (object) [
                     'default' => 'Retail',
                     'isCustom' => true
                 ],
+                'businessType' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Comoputer Sale & Repair',
+                        1 => 'Electrical Goods',
+                        2 => 'Furniture',
+                        3 => 'Hardware',
+                        4 => 'Liquor Shop',
+                        5 => 'Mom & Pop Shop',
+                        6 => 'Money Changer',
+                        7 => 'Mini Mart',
+                        8 => 'Mobile Handset',
+                        9 => 'Printing/Photocopy',
+                        10 => 'Pharmacy',
+                        11 => 'Restaurant',
+                        12 => 'Tea Shop'
+                    ],
+                    'style' => (object) [
+                        'Comoputer Sale & Repair' => NULL,
+                        'Electrical Goods' => NULL,
+                        'Furniture' => NULL,
+                        'Hardware' => NULL,
+                        'Liquor Shop' => NULL,
+                        'Mom & Pop Shop' => NULL,
+                        'Money Changer' => NULL,
+                        'Mini Mart' => NULL,
+                        'Mobile Handset' => NULL,
+                        'Printing/Photocopy' => NULL,
+                        'Pharmacy' => NULL,
+                        'Restaurant' => NULL,
+                        'Tea Shop' => NULL
+                    ],
+                    'default' => 'Comoputer Sale & Repair',
+                    'isCustom' => true
+                ],
+                'building' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'required' => true,
+                    'maxCount' => 1,
+                    'options' => [
+                        0 => 'Owned',
+                        1 => 'Rented'
+                    ],
+                    'isCustom' => true
+                ],
+                'avgDailySale' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'required' => true,
+                    'options' => [
+                        0 => 'Less than 100000',
+                        1 => 'Greater than 100000',
+                        2 => 'Greater than 200000',
+                        3 => 'Greater than 500000'
+                    ],
+                    'maxCount' => 1,
+                    'isCustom' => true
+                ],
+                'businessAtAddress' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'required' => true,
+                    'maxCount' => 1,
+                    'options' => [
+                        0 => 'Less than 1',
+                        1 => '1 - 2',
+                        2 => '2 - 3',
+                        3 => 'Greater than 3',
+                        4 => 'Greater than 5',
+                        5 => 'Greater than 10'
+                    ],
+                    'isCustom' => true
+                ],
+                'haveBranches' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Yes'
+                    ],
+                    'isCustom' => true
+                ],
+                'haveOtherBranches' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => '1',
+                        1 => '2',
+                        2 => '3',
+                        3 => '4',
+                        4 => '5',
+                        5 => '5 Plus'
+                    ],
+                    'style' => (object) [
+                        1 => NULL,
+                        2 => NULL,
+                        3 => NULL,
+                        4 => NULL,
+                        5 => NULL,
+                        '5 Plus' => NULL
+                    ],
+                    'default' => '1',
+                    'isCustom' => true
+                ],
+                'stafftoManager' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'required' => true,
+                    'options' => [
+                        0 => 'None',
+                        1 => '1',
+                        2 => '2 - 3',
+                        3 => '3 - 5',
+                        4 => '5 Plus'
+                    ],
+                    'maxCount' => 1,
+                    'isCustom' => true
+                ],
+                'sellCDSGProduct' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Premier Coffee',
+                        1 => 'Armo Fertilizer',
+                        2 => 'Medicine / Pharmacy'
+                    ],
+                    'isCustom' => true
+                ],
+                'haveMobileMoneyService' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Wave Money',
+                        1 => 'True Money',
+                        2 => 'MPT Money',
+                        3 => 'KBZ Pay',
+                        4 => 'AYA Pay',
+                        5 => 'MyTel Pay',
+                        6 => 'One Pay',
+                        7 => 'Ooredoo Mpitesan',
+                        8 => 'Ongo',
+                        9 => 'Near Me',
+                        10 => 'GET',
+                        11 => 'OK $'
+                    ],
+                    'isCustom' => true
+                ],
+                'sellWhichMobileMoney' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Wave Money',
+                        1 => 'True Money',
+                        2 => 'MPT Money',
+                        3 => 'KBZ Pay',
+                        4 => 'AYA Pay',
+                        5 => 'MyTel Pay',
+                        6 => 'One Pay',
+                        7 => 'Ooredoo Mpitesan',
+                        8 => 'Ongo',
+                        9 => 'Near Me',
+                        10 => 'GET',
+                        11 => 'OK $'
+                    ],
+                    'isCustom' => true
+                ],
+                'liquidity' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Less than 2 Lakh',
+                        1 => '2 - 3 Lakh',
+                        2 => '3 - 5 Lakh',
+                        3 => 'Greater than 5 Lakh',
+                        4 => '1 Million',
+                        5 => '2 Million'
+                    ],
+                    'style' => (object) [
+                        'Less than 2 Lakh' => NULL,
+                        '2 - 3 Lakh' => NULL,
+                        '3 - 5 Lakh' => NULL,
+                        'Greater than 5 Lakh' => NULL,
+                        '1 Million' => NULL,
+                        '2 Million' => NULL
+                    ],
+                    'default' => 'Less than 2 Lakh',
+                    'isCustom' => true
+                ],
+                'acceptQRcode' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'required' => true,
+                    'options' => [
+                        0 => 'KBZ Pay',
+                        1 => 'One Pay',
+                        2 => 'Near Me',
+                        3 => 'Wave Money',
+                        4 => 'Visa'
+                    ],
+                    'isCustom' => true
+                ],
+                'investLiquidity' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => '2 Lakh',
+                        1 => '3 Lakh',
+                        2 => '5 Lakh',
+                        3 => '1 Million',
+                        4 => '2 Million'
+                    ],
+                    'style' => (object) [
+                        '2 Lakh' => NULL,
+                        '3 Lakh' => NULL,
+                        '5 Lakh' => NULL,
+                        '1 Million' => NULL,
+                        '2 Million' => NULL
+                    ],
+                    'default' => '2 Lakh',
+                    'isCustom' => true
+                ],
+                'useWhichBank' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'CB',
+                        1 => 'KBZ',
+                        2 => 'MCB',
+                        3 => 'MAB',
+                        4 => 'YOMA',
+                        5 => 'AYA',
+                        6 => 'UAB'
+                    ],
+                    'isCustom' => true
+                ],
+                'referFriends' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Yes',
+                        1 => 'No'
+                    ],
+                    'maxCount' => 1,
+                    'isCustom' => true
+                ],
+                'referFriendsText' => (object) [
+                    'type' => 'varchar',
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'startBusiness' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'maxCount' => 1,
+                    'options' => [
+                        0 => 'Immediately',
+                        1 => '1 Week'
+                    ],
+                    'isCustom' => true
+                ],
+                'startBusinessDate' => (object) [
+                    'notNull' => false,
+                    'type' => 'date',
+                    'isCustom' => true
+                ],
+                'nrc' => (object) [
+                    'type' => 'varchar',
+                    'required' => true,
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'accountType' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Agent',
+                        1 => 'Biller',
+                        2 => 'Merchant',
+                        3 => 'Super-Agent'
+                    ],
+                    'style' => (object) [
+                        'Agent' => NULL,
+                        'Biller' => NULL,
+                        'Merchant' => NULL,
+                        'Super-Agent' => NULL
+                    ],
+                    'default' => 'Agent',
+                    'isCustom' => true
+                ],
+                'companyName' => (object) [
+                    'type' => 'varchar',
+                    'required' => true,
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'annualRevenue' => (object) [
+                    'type' => 'currency',
+                    'isCustom' => true
+                ],
+                'noofEmp' => (object) [
+                    'type' => 'int',
+                    'isCustom' => true
+                ],
+                'remarks' => (object) [
+                    'type' => 'text',
+                    'rowsMin' => 2,
+                    'cutHeight' => 200,
+                    'isCustom' => true
+                ],
+                'division' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Yangon',
+                        1 => 'Mandalay',
+                        2 => 'Napyitaw'
+                    ],
+                    'style' => (object) [
+                        'Yangon' => NULL,
+                        'Mandalay' => NULL,
+                        'Napyitaw' => NULL
+                    ],
+                    'default' => 'Yangon',
+                    'isCustom' => true
+                ],
+                'township' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Alone',
+                        1 => 'Bahan',
+                        2 => 'Dagon',
+                        3 => 'Sanchaung',
+                        4 => 'Kyimyindine'
+                    ],
+                    'style' => (object) [
+                        'Alone' => NULL,
+                        'Bahan' => NULL,
+                        'Dagon' => NULL,
+                        'Sanchaung' => NULL,
+                        'Kyimyindine' => NULL
+                    ],
+                    'default' => 'Alone',
+                    'isCustom' => true
+                ],
+                'country' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => '',
+                        1 => 'Min Ga Yu'
+                    ],
+                    'style' => (object) [
+                        '' => NULL,
+                        'Min Ga Yu' => NULL
+                    ],
+                    'default' => '',
+                    'isCustom' => true
+                ],
+                'detailAddress' => (object) [
+                    'type' => 'text',
+                    'required' => true,
+                    'rowsMin' => 2,
+                    'cutHeight' => 200,
+                    'isCustom' => true
+                ],
+                'billPaymentType' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'maxCount' => 1,
+                    'options' => [
+                        0 => 'Online',
+                        1 => 'Offline'
+                    ],
+                    'isCustom' => true
+                ],
+                'settlement' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'maxCount' => 1,
+                    'options' => [
+                        0 => 'Daily',
+                        1 => 'Weekly',
+                        2 => 'Monthly'
+                    ],
+                    'isCustom' => true
+                ],
+                'settleMethod' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Bank',
+                        1 => 'Cash',
+                        2 => 'Mobile Money',
+                        3 => 'Other'
+                    ],
+                    'maxCount' => 1,
+                    'isCustom' => true
+                ],
+                'ticketSize' => (object) [
+                    'type' => 'int',
+                    'isCustom' => true
+                ],
+                'customerFees' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => '',
+                        1 => 'Surcharge Flat',
+                        2 => 'Commission Flat',
+                        3 => 'Surcharge Percent',
+                        4 => 'Commission Percent'
+                    ],
+                    'style' => (object) [
+                        '' => NULL,
+                        'Surcharge Flat' => NULL,
+                        'Commission Flat' => NULL,
+                        'Surcharge Percent' => NULL,
+                        'Commission Percent' => NULL
+                    ],
+                    'default' => '',
+                    'isCustom' => true
+                ],
+                'processFees' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => '',
+                        1 => 'Surcharge Flat',
+                        2 => 'Commission Flat',
+                        3 => 'Surcharge Percent',
+                        4 => 'Commission Percent'
+                    ],
+                    'style' => (object) [
+                        '' => NULL,
+                        'Surcharge Flat' => NULL,
+                        'Commission Flat' => NULL,
+                        'Surcharge Percent' => NULL,
+                        'Commission Percent' => NULL
+                    ],
+                    'default' => '',
+                    'isCustom' => true
+                ],
+                'annualTransCount' => (object) [
+                    'type' => 'int',
+                    'isCustom' => true
+                ],
+                'contractSigned' => (object) [
+                    'type' => 'attachmentMultiple',
+                    'previewSize' => 'medium',
+                    'sourceList' => [
+                        
+                    ],
+                    'accept' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'businessLicenseImage' => (object) [
+                    'type' => 'image',
+                    'previewSize' => 'small',
+                    'isCustom' => true
+                ],
+                'companyReg' => (object) [
+                    'type' => 'attachmentMultiple',
+                    'previewSize' => 'medium',
+                    'sourceList' => [
+                        0 => 'Document'
+                    ],
+                    'accept' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'bankDeclaration' => (object) [
+                    'type' => 'attachmentMultiple',
+                    'previewSize' => 'medium',
+                    'sourceList' => [
+                        0 => 'Document'
+                    ],
+                    'accept' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'bankVerification' => (object) [
+                    'type' => 'attachmentMultiple',
+                    'previewSize' => 'medium',
+                    'sourceList' => [
+                        0 => 'Document'
+                    ],
+                    'accept' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'gPSLocationAttachment' => (object) [
+                    'type' => 'attachmentMultiple',
+                    'previewSize' => 'medium',
+                    'sourceList' => [
+                        
+                    ],
+                    'accept' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'walletAppSurvey' => (object) [
+                    'type' => 'attachmentMultiple',
+                    'previewSize' => 'medium',
+                    'sourceList' => [
+                        0 => 'Document'
+                    ],
+                    'accept' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'phoneNumberss' => (object) [
+                    'type' => 'image',
+                    'previewSize' => 'small',
+                    'isCustom' => true
+                ],
+                'leadID' => (object) [
+                    'type' => 'number',
+                    'len' => 36,
+                    'notNull' => false,
+                    'unique' => false,
+                    'nextNumber' => 1,
+                    'padLength' => 10,
+                    'prefix' => 'L',
+                    'isCustom' => true
+                ],
                 'middleName' => (object) [
                     'type' => 'varchar',
                     'trim' => true,
@@ -15198,6 +15919,27 @@ return (object) [
                     'mergeDisabled' => true,
                     'customizationDefaultDisabled' => true,
                     'customizationReadOnlyDisabled' => true
+                ],
+                'annualRevenueCurrency' => (object) [
+                    'type' => 'enum',
+                    'view' => 'views/fields/currency-list',
+                    'layoutDetailDisabled' => true,
+                    'layoutListDisabled' => true,
+                    'layoutMassUpdateDisabled' => true,
+                    'layoutDefaultSidePanelDisabled' => true,
+                    'customizationRequiredDisabled' => true,
+                    'customizationOptionsDisabled' => true,
+                    'customizationIsSortedDisabled' => true,
+                    'customizationDisplayAsLabelDisabled' => true,
+                    'customizationAuditedDisabled' => true,
+                    'customizationReadOnlyDisabled' => true,
+                    'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+                    'maxLength' => 6
+                ],
+                'annualRevenueConverted' => (object) [
+                    'type' => 'currencyConverted',
+                    'readOnly' => true,
+                    'importDisabled' => true
                 ]
             ],
             'links' => (object) [
@@ -15287,6 +16029,66 @@ return (object) [
                     'entity' => 'Document',
                     'foreign' => 'leads',
                     'audited' => true
+                ],
+                'contractSigned' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Attachment',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true,
+                    'relationName' => 'attachments',
+                    'disabled' => true
+                ],
+                'businessLicenseImage' => (object) [
+                    'type' => 'belongsTo',
+                    'entity' => 'Attachment',
+                    'skipOrmDefs' => true,
+                    'disabled' => true
+                ],
+                'companyReg' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Attachment',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true,
+                    'relationName' => 'attachments',
+                    'disabled' => true
+                ],
+                'bankDeclaration' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Attachment',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true,
+                    'relationName' => 'attachments',
+                    'disabled' => true
+                ],
+                'bankVerification' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Attachment',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true,
+                    'relationName' => 'attachments',
+                    'disabled' => true
+                ],
+                'gPSLocationAttachment' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Attachment',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true,
+                    'relationName' => 'attachments',
+                    'disabled' => true
+                ],
+                'walletAppSurvey' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Attachment',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true,
+                    'relationName' => 'attachments',
+                    'disabled' => true
+                ],
+                'phoneNumberss' => (object) [
+                    'type' => 'belongsTo',
+                    'entity' => 'Attachment',
+                    'skipOrmDefs' => true,
+                    'disabled' => true
                 ]
             ],
             'convertEntityList' => [
