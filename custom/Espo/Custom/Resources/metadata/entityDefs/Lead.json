@@ -312,7 +312,8 @@
             "required": true,
             "trim": true,
             "options": [],
-            "isCustom": true
+            "isCustom": true,
+            "unique": true
         },
         "accountType": {
             "type": "enum",

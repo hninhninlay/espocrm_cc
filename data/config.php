@@ -1,6 +1,6 @@
 <?php
 return [
-    'cacheTimestamp' => 1582602072,
+    'cacheTimestamp' => 1582604109,
     'database' => [
         'driver' => 'pdo_mysql',
         'host' => 'localhost',

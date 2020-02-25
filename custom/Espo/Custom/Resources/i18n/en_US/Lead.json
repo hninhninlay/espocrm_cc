@@ -20,7 +20,7 @@
         "startBusiness": "When would Shop like to start our business",
         "startBusinessDate": "if Both Not",
         "status": "Lead Status",
-        "nrc": "NRC",
+        "nrc": "NRC Number",
         "accountType": "Account Type",
         "companyName": "Company Name",
         "source": "Lead Source",
