@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "Встречи",
+    "calls": "Звонки",
+    "tasks": "Задачи"
+  },
+  "labels": {
+    "Create Survey2": "Создать Survey2"
+  }
+}

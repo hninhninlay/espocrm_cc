@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "Sastanci",
+    "calls": "Pozivi",
+    "tasks": "Zadaci"
+  },
+  "labels": {
+    "Create Survey2": "Kreiraj Survey2"
+  }
+}

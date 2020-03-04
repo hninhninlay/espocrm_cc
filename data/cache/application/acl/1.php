@@ -377,6 +377,20 @@ return (object) [
             'edit' => 'all',
             'delete' => 'all',
             'create' => 'yes'
+        ],
+        'Survey' => (object) [
+            'read' => 'all',
+            'stream' => 'all',
+            'edit' => 'all',
+            'delete' => 'all',
+            'create' => 'yes'
+        ],
+        'Survey2' => (object) [
+            'read' => 'all',
+            'stream' => 'all',
+            'edit' => 'all',
+            'delete' => 'all',
+            'create' => 'yes'
         ]
     ],
     'fieldTable' => (object) [

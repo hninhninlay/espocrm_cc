@@ -5328,6 +5328,35 @@ return (object) [
             ],
             'iconClass' => 'fas fa-tasks',
             'kanbanViewMode' => true
+        ],
+        'Survey' => (object) [
+            'controller' => 'controllers/record',
+            'boolFilterList' => [
+                0 => 'onlyMy'
+            ],
+            'sidePanels' => (object) [
+                'detail' => [
+                    0 => (object) [
+                        'name' => 'activities',
+                        'label' => 'Activities',
+                        'view' => 'crm:views/record/panels/activities',
+                        'aclScope' => 'Activities'
+                    ],
+                    1 => (object) [
+                        'name' => 'history',
+                        'label' => 'History',
+                        'view' => 'crm:views/record/panels/history',
+                        'aclScope' => 'Activities'
+                    ],
+                    2 => (object) [
+                        'name' => 'tasks',
+                        'label' => 'Tasks',
+                        'view' => 'crm:views/record/panels/tasks',
+                        'aclScope' => 'Task'
+                    ]
+                ]
+            ],
+            'iconClass' => 'fas fa-check-square'
         ]
     ],
     'dashlets' => (object) [
@@ -7627,7 +7656,8 @@ return (object) [
                         1 => 'Lead',
                         2 => 'Contact',
                         3 => 'Opportunity',
-                        4 => 'Case'
+                        4 => 'Case',
+                        5 => 'Survey'
                     ]
                 ],
                 'dateSent' => (object) [
@@ -12881,7 +12911,8 @@ return (object) [
                         1 => 'Lead',
                         2 => 'Contact',
                         3 => 'Opportunity',
-                        4 => 'Case'
+                        4 => 'Case',
+                        5 => 'Survey'
                     ]
                 ],
                 'account' => (object) [
@@ -15605,7 +15636,8 @@ return (object) [
                     'options' => [
                         
                     ],
-                    'isCustom' => true
+                    'isCustom' => true,
+                    'unique' => true
                 ],
                 'accountType' => (object) [
                     'type' => 'enum',
@@ -16377,7 +16409,8 @@ return (object) [
                         1 => 'Lead',
                         2 => 'Contact',
                         3 => 'Opportunity',
-                        4 => 'Case'
+                        4 => 'Case',
+                        5 => 'Survey'
                     ]
                 ],
                 'account' => (object) [
@@ -17617,7 +17650,8 @@ return (object) [
                         1 => 'Contact',
                         2 => 'Lead',
                         3 => 'Opportunity',
-                        4 => 'Case'
+                        4 => 'Case',
+                        5 => 'Survey'
                     ]
                 ],
                 'account' => (object) [
@@ -17736,6 +17770,119 @@ return (object) [
                     'columns' => [
                         0 => 'assignedUserId',
                         1 => 'status'
+                    ]
+                ]
+            ]
+        ],
+        'Survey' => (object) [
+            'fields' => (object) [
+                'name' => (object) [
+                    'type' => 'varchar',
+                    'required' => true,
+                    'trim' => true
+                ],
+                'description' => (object) [
+                    'type' => 'text'
+                ],
+                'createdAt' => (object) [
+                    'type' => 'datetime',
+                    'readOnly' => true
+                ],
+                'modifiedAt' => (object) [
+                    'type' => 'datetime',
+                    'readOnly' => true
+                ],
+                'createdBy' => (object) [
+                    'type' => 'link',
+                    'readOnly' => true,
+                    'view' => 'views/fields/user'
+                ],
+                'modifiedBy' => (object) [
+                    'type' => 'link',
+                    'readOnly' => true,
+                    'view' => 'views/fields/user'
+                ],
+                'assignedUser' => (object) [
+                    'type' => 'link',
+                    'required' => true,
+                    'view' => 'views/fields/assigned-user'
+                ],
+                'teams' => (object) [
+                    'type' => 'linkMultiple',
+                    'view' => 'views/fields/teams'
+                ],
+                'surveyID' => (object) [
+                    'type' => 'number',
+                    'len' => 36,
+                    'notNull' => false,
+                    'unique' => false,
+                    'nextNumber' => 1,
+                    'padLength' => 1,
+                    'prefix' => 'S',
+                    'isCustom' => true
+                ]
+            ],
+            'links' => (object) [
+                'createdBy' => (object) [
+                    'type' => 'belongsTo',
+                    'entity' => 'User'
+                ],
+                'modifiedBy' => (object) [
+                    'type' => 'belongsTo',
+                    'entity' => 'User'
+                ],
+                'assignedUser' => (object) [
+                    'type' => 'belongsTo',
+                    'entity' => 'User'
+                ],
+                'teams' => (object) [
+                    'type' => 'hasMany',
+                    'entity' => 'Team',
+                    'relationName' => 'EntityTeam',
+                    'layoutRelationshipsDisabled' => true
+                ],
+                'meetings' => (object) [
+                    'type' => 'hasMany',
+                    'entity' => 'Meeting',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true
+                ],
+                'calls' => (object) [
+                    'type' => 'hasMany',
+                    'entity' => 'Call',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true
+                ],
+                'tasks' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Task',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true
+                ],
+                'emails' => (object) [
+                    'type' => 'hasChildren',
+                    'entity' => 'Email',
+                    'foreign' => 'parent',
+                    'layoutRelationshipsDisabled' => true
+                ]
+            ],
+            'collection' => (object) [
+                'orderBy' => 'createdAt',
+                'order' => 'desc',
+                'sortBy' => 'createdAt',
+                'asc' => false
+            ],
+            'indexes' => (object) [
+                'name' => (object) [
+                    'columns' => [
+                        0 => 'name',
+                        1 => 'deleted'
+                    ]
+                ],
+                'assignedUser' => (object) [
+                    'columns' => [
+                        0 => 'assignedUserId',
+                        1 => 'deleted'
                     ]
                 ]
             ]
@@ -20160,6 +20307,29 @@ return (object) [
                 0 => 'Canceled',
                 1 => 'Deferred'
             ]
+        ],
+        'Survey' => (object) [
+            'entity' => true,
+            'layouts' => true,
+            'tab' => true,
+            'acl' => true,
+            'aclPortal' => true,
+            'aclPortalLevelList' => [
+                0 => 'all',
+                1 => 'account',
+                2 => 'contact',
+                3 => 'own',
+                4 => 'no'
+            ],
+            'customizable' => true,
+            'importable' => true,
+            'notifications' => true,
+            'stream' => false,
+            'disabled' => false,
+            'type' => 'BasePlus',
+            'module' => 'Custom',
+            'object' => true,
+            'isCustom' => true
         ]
     ],
     'themes' => (object) [

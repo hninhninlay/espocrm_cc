@@ -1,0 +1,10 @@
+{
+  "links": {
+    "meetings": "Reuniones",
+    "calls": "Llamadas",
+    "tasks": "Tareas"
+  },
+  "labels": {
+    "Create Survey1": "Crear Survey1"
+  }
+}

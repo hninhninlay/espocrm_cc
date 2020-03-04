@@ -63,5 +63,6 @@ return array (
   'Target' => '\\Espo\\Modules\\Crm\\Services\\Target',
   'TargetList' => '\\Espo\\Modules\\Crm\\Services\\TargetList',
   'Task' => '\\Espo\\Modules\\Crm\\Services\\Task',
+  'Survey' => '\\Espo\\Custom\\Services\\Survey',
 );
 ?>

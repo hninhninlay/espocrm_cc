@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "surveyID": "Survey ID"
+    },
+    "links": {
+        "meetings": "Meetings",
+        "calls": "Calls",
+        "tasks": "Tasks"
+    },
+    "labels": {
+        "Create Survey": "Create Survey"
+    }
+}

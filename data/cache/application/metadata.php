@@ -6737,6 +6737,42 @@ return array (
       'iconClass' => 'fas fa-tasks',
       'kanbanViewMode' => true,
     ),
+    'Survey' => 
+    array (
+      'controller' => 'controllers/record',
+      'boolFilterList' => 
+      array (
+        0 => 'onlyMy',
+      ),
+      'sidePanels' => 
+      array (
+        'detail' => 
+        array (
+          0 => 
+          array (
+            'name' => 'activities',
+            'label' => 'Activities',
+            'view' => 'crm:views/record/panels/activities',
+            'aclScope' => 'Activities',
+          ),
+          1 => 
+          array (
+            'name' => 'history',
+            'label' => 'History',
+            'view' => 'crm:views/record/panels/history',
+            'aclScope' => 'Activities',
+          ),
+          2 => 
+          array (
+            'name' => 'tasks',
+            'label' => 'Tasks',
+            'view' => 'crm:views/record/panels/tasks',
+            'aclScope' => 'Task',
+          ),
+        ),
+      ),
+      'iconClass' => 'fas fa-check-square',
+    ),
   ),
   'dashlets' => 
   array (
@@ -9685,6 +9721,7 @@ return array (
             2 => 'Contact',
             3 => 'Opportunity',
             4 => 'Case',
+            5 => 'Survey',
           ),
         ),
         'dateSent' => 
@@ -16050,6 +16087,7 @@ return array (
             2 => 'Contact',
             3 => 'Opportunity',
             4 => 'Case',
+            5 => 'Survey',
           ),
         ),
         'account' => 
@@ -19348,6 +19386,7 @@ return array (
           array (
           ),
           'isCustom' => true,
+          'unique' => true,
         ),
         'accountType' => 
         array (
@@ -20264,6 +20303,7 @@ return array (
             2 => 'Contact',
             3 => 'Opportunity',
             4 => 'Case',
+            5 => 'Survey',
           ),
         ),
         'account' => 
@@ -21796,6 +21836,7 @@ return array (
             2 => 'Lead',
             3 => 'Opportunity',
             4 => 'Case',
+            5 => 'Survey',
           ),
         ),
         'account' => 
@@ -21946,6 +21987,145 @@ return array (
           array (
             0 => 'assignedUserId',
             1 => 'status',
+          ),
+        ),
+      ),
+    ),
+    'Survey' => 
+    array (
+      'fields' => 
+      array (
+        'name' => 
+        array (
+          'type' => 'varchar',
+          'required' => true,
+          'trim' => true,
+        ),
+        'description' => 
+        array (
+          'type' => 'text',
+        ),
+        'createdAt' => 
+        array (
+          'type' => 'datetime',
+          'readOnly' => true,
+        ),
+        'modifiedAt' => 
+        array (
+          'type' => 'datetime',
+          'readOnly' => true,
+        ),
+        'createdBy' => 
+        array (
+          'type' => 'link',
+          'readOnly' => true,
+          'view' => 'views/fields/user',
+        ),
+        'modifiedBy' => 
+        array (
+          'type' => 'link',
+          'readOnly' => true,
+          'view' => 'views/fields/user',
+        ),
+        'assignedUser' => 
+        array (
+          'type' => 'link',
+          'required' => true,
+          'view' => 'views/fields/assigned-user',
+        ),
+        'teams' => 
+        array (
+          'type' => 'linkMultiple',
+          'view' => 'views/fields/teams',
+        ),
+        'surveyID' => 
+        array (
+          'type' => 'number',
+          'len' => 36,
+          'notNull' => false,
+          'unique' => false,
+          'nextNumber' => 1,
+          'padLength' => 1,
+          'prefix' => 'S',
+          'isCustom' => true,
+        ),
+      ),
+      'links' => 
+      array (
+        'createdBy' => 
+        array (
+          'type' => 'belongsTo',
+          'entity' => 'User',
+        ),
+        'modifiedBy' => 
+        array (
+          'type' => 'belongsTo',
+          'entity' => 'User',
+        ),
+        'assignedUser' => 
+        array (
+          'type' => 'belongsTo',
+          'entity' => 'User',
+        ),
+        'teams' => 
+        array (
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true,
+        ),
+        'meetings' => 
+        array (
+          'type' => 'hasMany',
+          'entity' => 'Meeting',
+          'foreign' => 'parent',
+          'layoutRelationshipsDisabled' => true,
+        ),
+        'calls' => 
+        array (
+          'type' => 'hasMany',
+          'entity' => 'Call',
+          'foreign' => 'parent',
+          'layoutRelationshipsDisabled' => true,
+        ),
+        'tasks' => 
+        array (
+          'type' => 'hasChildren',
+          'entity' => 'Task',
+          'foreign' => 'parent',
+          'layoutRelationshipsDisabled' => true,
+        ),
+        'emails' => 
+        array (
+          'type' => 'hasChildren',
+          'entity' => 'Email',
+          'foreign' => 'parent',
+          'layoutRelationshipsDisabled' => true,
+        ),
+      ),
+      'collection' => 
+      array (
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'sortBy' => 'createdAt',
+        'asc' => false,
+      ),
+      'indexes' => 
+      array (
+        'name' => 
+        array (
+          'columns' => 
+          array (
+            0 => 'name',
+            1 => 'deleted',
+          ),
+        ),
+        'assignedUser' => 
+        array (
+          'columns' => 
+          array (
+            0 => 'assignedUserId',
+            1 => 'deleted',
           ),
         ),
       ),
@@ -24848,6 +25028,31 @@ return array (
         0 => 'Canceled',
         1 => 'Deferred',
       ),
+    ),
+    'Survey' => 
+    array (
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => 
+      array (
+        0 => 'all',
+        1 => 'account',
+        2 => 'contact',
+        3 => 'own',
+        4 => 'no',
+      ),
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'stream' => false,
+      'disabled' => false,
+      'type' => 'BasePlus',
+      'module' => 'Custom',
+      'object' => true,
+      'isCustom' => true,
     ),
   ),
   'themes' => 

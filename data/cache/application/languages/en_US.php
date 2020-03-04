@@ -1428,6 +1428,7 @@ Event - available in Calendar and Activities panel.',
       'KnowledgeBaseArticle' => 'Knowledge Base Article',
       'KnowledgeBaseCategory' => 'Knowledge Base Category',
       'CampaignLogRecord' => 'Campaign Log Record',
+      'Survey' => 'Survey',
     ),
     'scopeNamesPlural' => 
     array (
@@ -1493,6 +1494,7 @@ Event - available in Calendar and Activities panel.',
       'KnowledgeBaseArticle' => 'Knowledge Base',
       'KnowledgeBaseCategory' => 'Knowledge Base Categories',
       'CampaignLogRecord' => 'Campaign Log Records',
+      'Survey' => 'Survey',
     ),
     'labels' => 
     array (
@@ -4922,6 +4924,55 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       'deferred' => 'Deferred',
       'todays' => 'Today\'s',
       'overdue' => 'Overdue',
+    ),
+  ),
+  'Survey' => 
+  array (
+    'fields' => 
+    array (
+      'surveyID' => 'Survey ID',
+    ),
+    'links' => 
+    array (
+      'meetings' => 'Meetings',
+      'calls' => 'Calls',
+      'tasks' => 'Tasks',
+    ),
+    'labels' => 
+    array (
+      'Create Survey' => 'Create Survey',
+    ),
+  ),
+  'Survey1' => 
+  array (
+    'fields' => 
+    array (
+    ),
+    'links' => 
+    array (
+      'meetings' => 'Meetings',
+      'calls' => 'Calls',
+      'tasks' => 'Tasks',
+    ),
+    'labels' => 
+    array (
+      'Create Survey1' => 'Create Survey1',
+    ),
+  ),
+  'Survey2' => 
+  array (
+    'fields' => 
+    array (
+    ),
+    'links' => 
+    array (
+      'meetings' => 'Meetings',
+      'calls' => 'Calls',
+      'tasks' => 'Tasks',
+    ),
+    'labels' => 
+    array (
+      'Create Survey2' => 'Create Survey2',
     ),
   ),
 );
