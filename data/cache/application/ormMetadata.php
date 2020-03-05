@@ -25292,6 +25292,211 @@ return array (
         'unique' => false,
         'fieldType' => 'varchar',
       ),
+      'accType' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Agent',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'division' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Yangon',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'township' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Alone',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'country' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Min Ga Yu',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'businessCategory' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Retail',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'businessType' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Computer Sale & Repair',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'shopBuilding' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'avgDailySale' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Less than 100000',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'yearsinBusinessAddress' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Less than 1',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'anyCDSGProduct' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'staffToManager' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'None',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'shopHaveBranches' => 
+      array (
+        'type' => 'bool',
+        'notNull' => true,
+        'default' => true,
+        'fieldType' => 'bool',
+      ),
+      'otherBranchesHave' => 
+      array (
+        'type' => 'varchar',
+        'default' => '1',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'shopHaveMMServices' => 
+      array (
+        'type' => 'bool',
+        'notNull' => true,
+        'default' => true,
+        'fieldType' => 'bool',
+      ),
+      'sellMMServices' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'investedLiquidity' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Less than 2 Lakh',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'shopAcceptQRcode' => 
+      array (
+        'type' => 'bool',
+        'notNull' => true,
+        'default' => true,
+        'fieldType' => 'bool',
+      ),
+      'investLiquidityinCC' => 
+      array (
+        'type' => 'varchar',
+        'default' => '2 Lakh',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'shopusedforBank' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'referFriends' => 
+      array (
+        'type' => 'bool',
+        'notNull' => true,
+        'default' => true,
+        'fieldType' => 'bool',
+      ),
+      'yesforReferFriends' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'startBusiness' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'startBusinessDate' => 
+      array (
+        'type' => 'date',
+        'notNull' => false,
+        'fieldType' => 'date',
+      ),
+      'billPaymentType' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Online',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'avgTicketSize' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'settlement' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Daily',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'settleMethod' => 
+      array (
+        'type' => 'jsonArray',
+        'storeArrayValues' => true,
+        'fieldType' => 'jsonArray',
+      ),
+      'customerFees' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Surcharge Flat',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'processingFees' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Surcharge Flat',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'annualTransCount' => 
+      array (
+        'type' => 'int',
+        'fieldType' => 'int',
+        'len' => 11,
+      ),
+      'streetAddress' => 
+      array (
+        'type' => 'text',
+        'fieldType' => 'text',
+      ),
       'createdById' => 
       array (
         'dbType' => 'varchar',

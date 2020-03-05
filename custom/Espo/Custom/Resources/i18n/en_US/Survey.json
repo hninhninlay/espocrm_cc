@@ -1,6 +1,37 @@
 {
     "fields": {
-        "surveyID": "Survey ID"
+        "surveyID": "Survey ID",
+        "accType": "Account Type",
+        "division": "Division",
+        "township": "Township",
+        "country": "Country",
+        "businessCategory": "Category of Business / POS",
+        "businessType": "Type of Business",
+        "shopBuilding": "Shop Building / Premise (Select one)",
+        "avgDailySale": "Average Daily Sale (not profit / Income)",
+        "yearsinBusinessAddress": "Number of Years in Business at this Address",
+        "anyCDSGProduct": "Does Shop Sell Any CDSG Product?",
+        "staffToManager": "Number of Staff to Manager Business",
+        "shopHaveBranches": "A) Does Shop have Branches",
+        "otherBranchesHave": "B) How Many Other Branches Have",
+        "shopHaveMMServices": "Does Shop Have Mobile Money Services?",
+        "sellMMServices": "Which Mobile Money Service they sell?",
+        "investedLiquidity": "How Much Liquidity / E-money they Invest?",
+        "shopAcceptQRcode": "Does POS Accept QR code Payment of Any Mobile Wallet?",
+        "investLiquidityinCC": "How Much Liquidity / E-money can they invest for Capital Connect?",
+        "shopusedforBank": "Which Banks Shop use for Business?",
+        "referFriends": "Would you Like to Refer your Friend/ Family or Acquaintance for our Capital Connect?",
+        "yesforReferFriends": "If Yes",
+        "startBusiness": "When would Shop like to start our business (Select One)",
+        "startBusinessDate": "if Both Not",
+        "billPaymentType": "Bill Payment Type",
+        "avgTicketSize": "Average Ticket Size",
+        "settlement": "Settlement",
+        "settleMethod": "Settlement Method",
+        "customerFees": "Customer Fees",
+        "processingFees": "Processing Fees",
+        "annualTransCount": "Annual Transaction Count",
+        "streetAddress": "Street Address"
     },
     "links": {
         "meetings": "Meetings",
@@ -9,5 +40,162 @@
     },
     "labels": {
         "Create Survey": "Create Survey"
+    },
+    "options": {
+        "accType": {
+            "Agent": "Agent",
+            "Biller": "Biller",
+            "Agent/Merchant": "Agent/Merchant",
+            "Merchant": "Merchant",
+            "Super-Agent": "Super-Agent"
+        },
+        "division": {
+            "Yangon": "Yangon",
+            "Mandalay": "Mandalay",
+            "Naypyitaw": "Naypyitaw"
+        },
+        "township": {
+            "Alone": "Alone",
+            "Bahan": "Bahan",
+            "Dagon": "Dagon",
+            "Sanchaung": "Sanchaung",
+            "Kyimyindine": "Kyimyindine"
+        },
+        "country": {
+            "Min Ga Yu": "Min Ga Yu"
+        },
+        "businessCategory": {
+            "Retail": "Retail",
+            "Whole Sale": "Whole Sale",
+            "Both": "Both"
+        },
+        "businessType": {
+            "Computer Sale & Repair": "Computer Sale & Repair",
+            "Electrical Goods": "Electrical Goods",
+            "Furniture": "Furniture",
+            "Hardware": "Hardware",
+            "Liquor Shop": "Liquor Shop",
+            "Mom & Pop Shop": "Mom & Pop Shop",
+            "Money Changer": "Money Changer",
+            "Mini Mart": "Mini Mart",
+            "Mobile Handset": "Mobile Handset",
+            "Printing/Photocopy": "Printing/Photocopy",
+            "Pharmacy": "Pharmacy",
+            "Restaurant": "Restaurant",
+            "Tea Shop": "Tea Shop"
+        },
+        "shopBuilding": {
+            "Owned": "Owned",
+            "Rented": "Rented"
+        },
+        "avgDailySale": {
+            "Less than 100000": "Less than 100000",
+            "Greater than 100000": "Greater than 100000",
+            "Greater than 200000": "Greater than 200000",
+            "Greater than 500000": "Greater than 500000"
+        },
+        "yearsinBusinessAddress": {
+            "Less than 1": "Less than 1",
+            "1 - 2": "1 - 2",
+            "2 - 3": "2 - 3",
+            "Greater than 3": "Greater than 3",
+            "Greater than 5": "Greater than 5",
+            "Greater than 10": "Greater than 10"
+        },
+        "anyCDSGProduct": {
+            "Premier Coffee": "Premier Coffee",
+            "Armo Fertilizer": "Armo Fertilizer",
+            "Medicine / Pharmacy": "Medicine / Pharmacy",
+            "Wah Lah": "Wah Lah"
+        },
+        "staffToManager": {
+            "1": "1",
+            "None": "None",
+            "2 - 3": "2 - 3",
+            "3 - 5": "3 - 5",
+            "5 Plus": "5 Plus"
+        },
+        "otherBranchesHave": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "5 Plus": "5 Plus"
+        },
+        "sellMMServices": {
+            "Wave Money": "Wave Money",
+            "True Money": "True Money",
+            "MPT Money": "MPT Money",
+            "KBZ Pay": "KBZ Pay",
+            "AYA Pay": "AYA Pay",
+            "MyTel Pay": "MyTel Pay",
+            "One Pay": "One Pay",
+            "Ooredoo Mpitesan": "Ooredoo Mpitesan",
+            "Ongo": "Ongo",
+            "Near Me": "Near Me",
+            "GET": "GET",
+            "OK $": "OK $"
+        },
+        "investedLiquidity": {
+            "Less than 2 Lakh": "Less than 2 Lakh",
+            "2 - 3 Lakh": "2 - 3 Lakh",
+            "3 - 5 Lakh": "3 - 5 Lakh",
+            "5 Lakh Plus": "5 Lakh Plus",
+            "1 Million": "1 Million",
+            "2 Million": "2 Million"
+        },
+        "investLiquidityinCC": {
+            "2 Lakh": "2 Lakh",
+            "3 Lakh": "3 Lakh",
+            "5 Lakh": "5 Lakh",
+            "1 Million": "1 Million",
+            "2 Million": "2 Million"
+        },
+        "shopusedforBank": {
+            "CB": "CB",
+            "KBZ": "KBZ",
+            "MCB": "MCB",
+            "MAB": "MAB",
+            "MEB": "MEB",
+            "MOB": "MOB",
+            "MTB": "MTB",
+            "YOMA": "YOMA",
+            "AYA": "AYA",
+            "AGD": "AGD",
+            "GTB": "GTB",
+            "Myawaddy": "Myawaddy"
+        },
+        "startBusiness": {
+            "Immediately": "Immediately",
+            "1 Week": "1 Week"
+        },
+        "billPaymentType": {
+            "Online": "Online",
+            "Offline": "Offline"
+        },
+        "settlement": {
+            "Daily": "Daily",
+            "Weekly": "Weekly",
+            "Monthly": "Monthly"
+        },
+        "settleMethod": {
+            "Bank": "Bank",
+            "Cash": "Cash",
+            "Mobile Money": "Mobile Money",
+            "Other": "Other"
+        },
+        "customerFees": {
+            "Surcharge Flat": "Surcharge Flat",
+            "Commission Flat": "Commission Flat",
+            "Surcharge Percent": "Surcharge Percent",
+            "Commission Percent": "Commission Percent"
+        },
+        "processingFees": {
+            "Surcharge Flat": "Surcharge Flat",
+            "Commission Flat": "Commission Flat",
+            "Surcharge Percent": "Surcharge Percent",
+            "Commission Percent": "Commission Percent"
+        }
     }
 }

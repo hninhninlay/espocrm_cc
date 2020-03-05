@@ -1,6 +1,6 @@
 <?php
 return [
-    'cacheTimestamp' => 1583320920,
+    'cacheTimestamp' => 1583403706,
     'database' => [
         'driver' => 'pdo_mysql',
         'host' => 'localhost',
@@ -69,7 +69,8 @@ return [
         12 => 'Campaign',
         13 => 'KnowledgeBaseArticle',
         14 => 'Stream',
-        15 => 'User'
+        15 => 'User',
+        16 => 'Survey'
     ],
     'quickCreateList' => [
         0 => 'Account',
@@ -199,6 +200,13 @@ return [
     ],
     'fullTextSearchMinLength' => 4,
     'actualDatabaseType' => 'mysql',
-    'actualDatabaseVersion' => '5.7.29'
+    'actualDatabaseVersion' => '5.7.29',
+    'userThemesDisabled' => false,
+    'avatarsDisabled' => false,
+    'scopeColorsDisabled' => false,
+    'tabIconsDisabled' => false,
+    'dashletsOptions' => (object) [
+        
+    ]
 ];
 ?>

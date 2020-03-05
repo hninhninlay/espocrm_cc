@@ -5356,7 +5356,199 @@ return (object) [
                     ]
                 ]
             ],
-            'iconClass' => 'fas fa-check-square'
+            'iconClass' => 'fas fa-check-square',
+            'dynamicLogic' => (object) [
+                'fields' => (object) [
+                    'shopHaveBranches' => (object) [
+                        'visible' => NULL,
+                        'readOnly' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'notEquals',
+                                    'attribute' => 'staffToManager',
+                                    'value' => '5 Plus'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'otherBranchesHave' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isTrue',
+                                    'attribute' => 'shopHaveBranches'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isTrue',
+                                    'attribute' => 'shopHaveBranches'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'sellMMServices' => (object) [
+                        'readOnly' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isFalse',
+                                    'attribute' => 'shopHaveMMServices'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isTrue',
+                                    'attribute' => 'shopHaveMMServices'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'yesforReferFriends' => (object) [
+                        'readOnly' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isFalse',
+                                    'attribute' => 'referFriends'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isTrue',
+                                    'attribute' => 'referFriends'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'startBusinessDate' => (object) [
+                        'readOnly' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isNotEmpty',
+                                    'attribute' => 'startBusiness'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'isEmpty',
+                                    'attribute' => 'startBusiness'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'billPaymentType' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'avgTicketSize' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'settlement' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'settleMethod' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ],
+                        'required' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'customerFees' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'processingFees' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ],
+                    'annualTransCount' => (object) [
+                        'visible' => (object) [
+                            'conditionGroup' => [
+                                0 => (object) [
+                                    'type' => 'equals',
+                                    'attribute' => 'accType',
+                                    'value' => 'Biller'
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ]
     ],
     'dashlets' => (object) [
@@ -17819,6 +18011,447 @@ return (object) [
                     'nextNumber' => 1,
                     'padLength' => 1,
                     'prefix' => 'S',
+                    'isCustom' => true
+                ],
+                'accType' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Agent',
+                        1 => 'Biller',
+                        2 => 'Agent/Merchant',
+                        3 => 'Merchant',
+                        4 => 'Super-Agent'
+                    ],
+                    'style' => (object) [
+                        'Agent' => NULL,
+                        'Biller' => NULL,
+                        'Agent/Merchant' => NULL,
+                        'Merchant' => NULL,
+                        'Super-Agent' => NULL
+                    ],
+                    'default' => 'Agent',
+                    'isCustom' => true
+                ],
+                'division' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Yangon',
+                        1 => 'Mandalay',
+                        2 => 'Naypyitaw'
+                    ],
+                    'style' => (object) [
+                        'Yangon' => NULL,
+                        'Mandalay' => NULL,
+                        'Naypyitaw' => NULL
+                    ],
+                    'default' => 'Yangon',
+                    'isCustom' => true
+                ],
+                'township' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Alone',
+                        1 => 'Bahan',
+                        2 => 'Dagon',
+                        3 => 'Sanchaung',
+                        4 => 'Kyimyindine'
+                    ],
+                    'style' => (object) [
+                        'Alone' => NULL,
+                        'Bahan' => NULL,
+                        'Dagon' => NULL,
+                        'Sanchaung' => NULL,
+                        'Kyimyindine' => NULL
+                    ],
+                    'default' => 'Alone',
+                    'isCustom' => true
+                ],
+                'country' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => 'Min Ga Yu'
+                    ],
+                    'style' => (object) [
+                        'Min Ga Yu' => NULL
+                    ],
+                    'default' => 'Min Ga Yu',
+                    'isCustom' => true
+                ],
+                'businessCategory' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Retail',
+                        1 => 'Whole Sale',
+                        2 => 'Both'
+                    ],
+                    'style' => (object) [
+                        'Retail' => NULL,
+                        'Whole Sale' => NULL,
+                        'Both' => NULL
+                    ],
+                    'default' => 'Retail',
+                    'isCustom' => true
+                ],
+                'businessType' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Computer Sale & Repair',
+                        1 => 'Electrical Goods',
+                        2 => 'Furniture',
+                        3 => 'Hardware',
+                        4 => 'Liquor Shop',
+                        5 => 'Mom & Pop Shop',
+                        6 => 'Money Changer',
+                        7 => 'Mini Mart',
+                        8 => 'Mobile Handset',
+                        9 => 'Printing/Photocopy',
+                        10 => 'Pharmacy',
+                        11 => 'Restaurant',
+                        12 => 'Tea Shop'
+                    ],
+                    'style' => (object) [
+                        'Computer Sale & Repair' => NULL,
+                        'Electrical Goods' => NULL,
+                        'Furniture' => NULL,
+                        'Hardware' => NULL,
+                        'Liquor Shop' => NULL,
+                        'Mom & Pop Shop' => NULL,
+                        'Money Changer' => NULL,
+                        'Mini Mart' => NULL,
+                        'Mobile Handset' => NULL,
+                        'Printing/Photocopy' => NULL,
+                        'Pharmacy' => NULL,
+                        'Restaurant' => NULL,
+                        'Tea Shop' => NULL
+                    ],
+                    'default' => 'Computer Sale & Repair',
+                    'isCustom' => true
+                ],
+                'shopBuilding' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'required' => true,
+                    'options' => [
+                        0 => 'Owned',
+                        1 => 'Rented'
+                    ],
+                    'maxCount' => 1,
+                    'isCustom' => true
+                ],
+                'avgDailySale' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Less than 100000',
+                        1 => 'Greater than 100000',
+                        2 => 'Greater than 200000',
+                        3 => 'Greater than 500000'
+                    ],
+                    'style' => (object) [
+                        'Less than 100000' => NULL,
+                        'Greater than 100000' => NULL,
+                        'Greater than 200000' => NULL,
+                        'Greater than 500000' => NULL
+                    ],
+                    'default' => 'Less than 100000',
+                    'isCustom' => true
+                ],
+                'yearsinBusinessAddress' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Less than 1',
+                        1 => '1 - 2',
+                        2 => '2 - 3',
+                        3 => 'Greater than 3',
+                        4 => 'Greater than 5',
+                        5 => 'Greater than 10'
+                    ],
+                    'style' => (object) [
+                        'Less than 1' => NULL,
+                        '1 - 2' => NULL,
+                        '2 - 3' => NULL,
+                        'Greater than 3' => NULL,
+                        'Greater than 5' => NULL,
+                        'Greater than 10' => NULL
+                    ],
+                    'default' => 'Less than 1',
+                    'isCustom' => true
+                ],
+                'anyCDSGProduct' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Premier Coffee',
+                        1 => 'Armo Fertilizer',
+                        2 => 'Medicine / Pharmacy',
+                        3 => 'Wah Lah'
+                    ],
+                    'isCustom' => true
+                ],
+                'staffToManager' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'None',
+                        1 => '1',
+                        2 => '2 - 3',
+                        3 => '3 - 5',
+                        4 => '5 Plus'
+                    ],
+                    'style' => (object) [
+                        1 => NULL,
+                        'None' => NULL,
+                        '2 - 3' => NULL,
+                        '3 - 5' => NULL,
+                        '5 Plus' => NULL
+                    ],
+                    'default' => 'None',
+                    'isCustom' => true
+                ],
+                'shopHaveBranches' => (object) [
+                    'notNull' => true,
+                    'type' => 'bool',
+                    'default' => true,
+                    'isCustom' => true
+                ],
+                'otherBranchesHave' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => '1',
+                        1 => '2',
+                        2 => '3',
+                        3 => '4',
+                        4 => '5',
+                        5 => '5 Plus'
+                    ],
+                    'style' => (object) [
+                        1 => NULL,
+                        2 => NULL,
+                        3 => NULL,
+                        4 => NULL,
+                        5 => NULL,
+                        '5 Plus' => NULL
+                    ],
+                    'default' => '1',
+                    'isCustom' => true
+                ],
+                'shopHaveMMServices' => (object) [
+                    'notNull' => true,
+                    'type' => 'bool',
+                    'default' => true,
+                    'isCustom' => true
+                ],
+                'sellMMServices' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Wave Money',
+                        1 => 'True Money',
+                        2 => 'MPT Money',
+                        3 => 'KBZ Pay',
+                        4 => 'AYA Pay',
+                        5 => 'MyTel Pay',
+                        6 => 'One Pay',
+                        7 => 'Ooredoo Mpitesan',
+                        8 => 'Ongo',
+                        9 => 'Near Me',
+                        10 => 'GET',
+                        11 => 'OK $'
+                    ],
+                    'isCustom' => true
+                ],
+                'investedLiquidity' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => 'Less than 2 Lakh',
+                        1 => '2 - 3 Lakh',
+                        2 => '3 - 5 Lakh',
+                        3 => '5 Lakh Plus',
+                        4 => '1 Million',
+                        5 => '2 Million'
+                    ],
+                    'style' => (object) [
+                        'Less than 2 Lakh' => NULL,
+                        '2 - 3 Lakh' => NULL,
+                        '3 - 5 Lakh' => NULL,
+                        '5 Lakh Plus' => NULL,
+                        '1 Million' => NULL,
+                        '2 Million' => NULL
+                    ],
+                    'default' => 'Less than 2 Lakh',
+                    'isCustom' => true
+                ],
+                'shopAcceptQRcode' => (object) [
+                    'notNull' => true,
+                    'type' => 'bool',
+                    'default' => true,
+                    'isCustom' => true
+                ],
+                'investLiquidityinCC' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => '2 Lakh',
+                        1 => '3 Lakh',
+                        2 => '5 Lakh',
+                        3 => '1 Million',
+                        4 => '2 Million'
+                    ],
+                    'style' => (object) [
+                        '2 Lakh' => NULL,
+                        '3 Lakh' => NULL,
+                        '5 Lakh' => NULL,
+                        '1 Million' => NULL,
+                        '2 Million' => NULL
+                    ],
+                    'default' => '2 Lakh',
+                    'isCustom' => true
+                ],
+                'shopusedforBank' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'required' => true,
+                    'options' => [
+                        0 => 'CB',
+                        1 => 'KBZ',
+                        2 => 'MCB',
+                        3 => 'MAB',
+                        4 => 'MEB',
+                        5 => 'MOB',
+                        6 => 'MTB',
+                        7 => 'YOMA',
+                        8 => 'AYA',
+                        9 => 'AGD',
+                        10 => 'GTB',
+                        11 => 'Myawaddy'
+                    ],
+                    'isSorted' => true,
+                    'isCustom' => true
+                ],
+                'referFriends' => (object) [
+                    'notNull' => true,
+                    'type' => 'bool',
+                    'default' => true,
+                    'isCustom' => true
+                ],
+                'yesforReferFriends' => (object) [
+                    'type' => 'varchar',
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'startBusiness' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Immediately',
+                        1 => '1 Week'
+                    ],
+                    'maxCount' => 1,
+                    'isCustom' => true
+                ],
+                'startBusinessDate' => (object) [
+                    'notNull' => false,
+                    'type' => 'date',
+                    'isCustom' => true
+                ],
+                'billPaymentType' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => 'Online',
+                        1 => 'Offline'
+                    ],
+                    'style' => (object) [
+                        'Online' => NULL,
+                        'Offline' => NULL
+                    ],
+                    'default' => 'Online',
+                    'isCustom' => true
+                ],
+                'avgTicketSize' => (object) [
+                    'type' => 'varchar',
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'settlement' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => 'Daily',
+                        1 => 'Weekly',
+                        2 => 'Monthly'
+                    ],
+                    'style' => (object) [
+                        'Daily' => NULL,
+                        'Weekly' => NULL,
+                        'Monthly' => NULL
+                    ],
+                    'default' => 'Daily',
+                    'isCustom' => true
+                ],
+                'settleMethod' => (object) [
+                    'type' => 'checklist',
+                    'storeArrayValues' => true,
+                    'options' => [
+                        0 => 'Bank',
+                        1 => 'Cash',
+                        2 => 'Mobile Money',
+                        3 => 'Other'
+                    ],
+                    'isCustom' => true
+                ],
+                'customerFees' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => 'Surcharge Flat',
+                        1 => 'Commission Flat',
+                        2 => 'Surcharge Percent',
+                        3 => 'Commission Percent'
+                    ],
+                    'style' => (object) [
+                        'Surcharge Flat' => NULL,
+                        'Commission Flat' => NULL,
+                        'Surcharge Percent' => NULL,
+                        'Commission Percent' => NULL
+                    ],
+                    'default' => 'Surcharge Flat',
+                    'isCustom' => true
+                ],
+                'processingFees' => (object) [
+                    'type' => 'enum',
+                    'options' => [
+                        0 => 'Surcharge Flat',
+                        1 => 'Commission Flat',
+                        2 => 'Surcharge Percent',
+                        3 => 'Commission Percent'
+                    ],
+                    'style' => (object) [
+                        'Surcharge Flat' => NULL,
+                        'Commission Flat' => NULL,
+                        'Surcharge Percent' => NULL,
+                        'Commission Percent' => NULL
+                    ],
+                    'default' => 'Surcharge Flat',
+                    'isCustom' => true
+                ],
+                'annualTransCount' => (object) [
+                    'type' => 'int',
+                    'isCustom' => true
+                ],
+                'streetAddress' => (object) [
+                    'type' => 'text',
+                    'required' => true,
+                    'rowsMin' => 2,
+                    'cutHeight' => 200,
                     'isCustom' => true
                 ]
             ],

@@ -1,0 +1,153 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "surveyID"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "businessCategory"
+                },
+                {
+                    "name": "businessType"
+                }
+            ],
+            [
+                {
+                    "name": "division"
+                },
+                {
+                    "name": "township"
+                }
+            ],
+            [
+                {
+                    "name": "country"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "streetAddress"
+                }
+            ],
+            [
+                {
+                    "name": "shopBuilding"
+                },
+                {
+                    "name": "avgDailySale"
+                }
+            ],
+            [
+                {
+                    "name": "yearsinBusinessAddress"
+                },
+                {
+                    "name": "anyCDSGProduct"
+                }
+            ],
+            [
+                {
+                    "name": "staffToManager"
+                }
+            ],
+            [
+                {
+                    "name": "shopHaveBranches"
+                },
+                {
+                    "name": "otherBranchesHave"
+                }
+            ],
+            [
+                {
+                    "name": "shopHaveMMServices"
+                },
+                {
+                    "name": "sellMMServices"
+                }
+            ],
+            [
+                {
+                    "name": "investedLiquidity"
+                },
+                {
+                    "name": "investLiquidityinCC"
+                }
+            ],
+            [
+                {
+                    "name": "shopAcceptQRcode"
+                },
+                {
+                    "name": "shopusedforBank"
+                }
+            ],
+            [
+                {
+                    "name": "referFriends"
+                },
+                {
+                    "name": "yesforReferFriends"
+                }
+            ],
+            [
+                {
+                    "name": "startBusiness"
+                },
+                {
+                    "name": "startBusinessDate"
+                }
+            ],
+            [
+                {
+                    "name": "accType"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "billPaymentType"
+                },
+                {
+                    "name": "avgTicketSize"
+                }
+            ],
+            [
+                {
+                    "name": "settlement"
+                },
+                {
+                    "name": "settleMethod"
+                }
+            ],
+            [
+                {
+                    "name": "customerFees"
+                },
+                {
+                    "name": "processingFees"
+                }
+            ],
+            [
+                {
+                    "name": "annualTransCount"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "dynamicLogicVisible": null,
+        "customLabel": "Biller Information"
+    }
+]

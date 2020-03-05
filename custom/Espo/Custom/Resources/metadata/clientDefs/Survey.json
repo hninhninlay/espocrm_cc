@@ -25,5 +25,197 @@
             }
         ]
     },
-    "iconClass": "fas fa-check-square"
+    "iconClass": "fas fa-check-square",
+    "dynamicLogic": {
+        "fields": {
+            "shopHaveBranches": {
+                "visible": null,
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "staffToManager",
+                            "value": "5 Plus"
+                        }
+                    ]
+                }
+            },
+            "otherBranchesHave": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "shopHaveBranches"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "shopHaveBranches"
+                        }
+                    ]
+                }
+            },
+            "sellMMServices": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "shopHaveMMServices"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "shopHaveMMServices"
+                        }
+                    ]
+                }
+            },
+            "yesforReferFriends": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "referFriends"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "referFriends"
+                        }
+                    ]
+                }
+            },
+            "startBusinessDate": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "startBusiness"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "startBusiness"
+                        }
+                    ]
+                }
+            },
+            "billPaymentType": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "avgTicketSize": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "settlement": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "settleMethod": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "customerFees": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "processingFees": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            },
+            "annualTransCount": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accType",
+                            "value": "Biller"
+                        }
+                    ]
+                }
+            }
+        }
+    }
 }

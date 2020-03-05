@@ -6772,6 +6772,269 @@ return array (
         ),
       ),
       'iconClass' => 'fas fa-check-square',
+      'dynamicLogic' => 
+      array (
+        'fields' => 
+        array (
+          'shopHaveBranches' => 
+          array (
+            'visible' => NULL,
+            'readOnly' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'notEquals',
+                  'attribute' => 'staffToManager',
+                  'value' => '5 Plus',
+                ),
+              ),
+            ),
+          ),
+          'otherBranchesHave' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isTrue',
+                  'attribute' => 'shopHaveBranches',
+                ),
+              ),
+            ),
+            'required' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isTrue',
+                  'attribute' => 'shopHaveBranches',
+                ),
+              ),
+            ),
+          ),
+          'sellMMServices' => 
+          array (
+            'readOnly' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isFalse',
+                  'attribute' => 'shopHaveMMServices',
+                ),
+              ),
+            ),
+            'required' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isTrue',
+                  'attribute' => 'shopHaveMMServices',
+                ),
+              ),
+            ),
+          ),
+          'yesforReferFriends' => 
+          array (
+            'readOnly' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isFalse',
+                  'attribute' => 'referFriends',
+                ),
+              ),
+            ),
+            'required' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isTrue',
+                  'attribute' => 'referFriends',
+                ),
+              ),
+            ),
+          ),
+          'startBusinessDate' => 
+          array (
+            'readOnly' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'startBusiness',
+                ),
+              ),
+            ),
+            'required' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'isEmpty',
+                  'attribute' => 'startBusiness',
+                ),
+              ),
+            ),
+          ),
+          'billPaymentType' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+            'required' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+          ),
+          'avgTicketSize' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+          ),
+          'settlement' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+            'required' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+          ),
+          'settleMethod' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+            'required' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+          ),
+          'customerFees' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+          ),
+          'processingFees' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+          ),
+          'annualTransCount' => 
+          array (
+            'visible' => 
+            array (
+              'conditionGroup' => 
+              array (
+                0 => 
+                array (
+                  'type' => 'equals',
+                  'attribute' => 'accType',
+                  'value' => 'Biller',
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     ),
   ),
   'dashlets' => 
@@ -22047,6 +22310,516 @@ return array (
           'nextNumber' => 1,
           'padLength' => 1,
           'prefix' => 'S',
+          'isCustom' => true,
+        ),
+        'accType' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Agent',
+            1 => 'Biller',
+            2 => 'Agent/Merchant',
+            3 => 'Merchant',
+            4 => 'Super-Agent',
+          ),
+          'style' => 
+          array (
+            'Agent' => NULL,
+            'Biller' => NULL,
+            'Agent/Merchant' => NULL,
+            'Merchant' => NULL,
+            'Super-Agent' => NULL,
+          ),
+          'default' => 'Agent',
+          'isCustom' => true,
+        ),
+        'division' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Yangon',
+            1 => 'Mandalay',
+            2 => 'Naypyitaw',
+          ),
+          'style' => 
+          array (
+            'Yangon' => NULL,
+            'Mandalay' => NULL,
+            'Naypyitaw' => NULL,
+          ),
+          'default' => 'Yangon',
+          'isCustom' => true,
+        ),
+        'township' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Alone',
+            1 => 'Bahan',
+            2 => 'Dagon',
+            3 => 'Sanchaung',
+            4 => 'Kyimyindine',
+          ),
+          'style' => 
+          array (
+            'Alone' => NULL,
+            'Bahan' => NULL,
+            'Dagon' => NULL,
+            'Sanchaung' => NULL,
+            'Kyimyindine' => NULL,
+          ),
+          'default' => 'Alone',
+          'isCustom' => true,
+        ),
+        'country' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => 'Min Ga Yu',
+          ),
+          'style' => 
+          array (
+            'Min Ga Yu' => NULL,
+          ),
+          'default' => 'Min Ga Yu',
+          'isCustom' => true,
+        ),
+        'businessCategory' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Retail',
+            1 => 'Whole Sale',
+            2 => 'Both',
+          ),
+          'style' => 
+          array (
+            'Retail' => NULL,
+            'Whole Sale' => NULL,
+            'Both' => NULL,
+          ),
+          'default' => 'Retail',
+          'isCustom' => true,
+        ),
+        'businessType' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Computer Sale & Repair',
+            1 => 'Electrical Goods',
+            2 => 'Furniture',
+            3 => 'Hardware',
+            4 => 'Liquor Shop',
+            5 => 'Mom & Pop Shop',
+            6 => 'Money Changer',
+            7 => 'Mini Mart',
+            8 => 'Mobile Handset',
+            9 => 'Printing/Photocopy',
+            10 => 'Pharmacy',
+            11 => 'Restaurant',
+            12 => 'Tea Shop',
+          ),
+          'style' => 
+          array (
+            'Computer Sale & Repair' => NULL,
+            'Electrical Goods' => NULL,
+            'Furniture' => NULL,
+            'Hardware' => NULL,
+            'Liquor Shop' => NULL,
+            'Mom & Pop Shop' => NULL,
+            'Money Changer' => NULL,
+            'Mini Mart' => NULL,
+            'Mobile Handset' => NULL,
+            'Printing/Photocopy' => NULL,
+            'Pharmacy' => NULL,
+            'Restaurant' => NULL,
+            'Tea Shop' => NULL,
+          ),
+          'default' => 'Computer Sale & Repair',
+          'isCustom' => true,
+        ),
+        'shopBuilding' => 
+        array (
+          'type' => 'checklist',
+          'storeArrayValues' => true,
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Owned',
+            1 => 'Rented',
+          ),
+          'maxCount' => 1,
+          'isCustom' => true,
+        ),
+        'avgDailySale' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Less than 100000',
+            1 => 'Greater than 100000',
+            2 => 'Greater than 200000',
+            3 => 'Greater than 500000',
+          ),
+          'style' => 
+          array (
+            'Less than 100000' => NULL,
+            'Greater than 100000' => NULL,
+            'Greater than 200000' => NULL,
+            'Greater than 500000' => NULL,
+          ),
+          'default' => 'Less than 100000',
+          'isCustom' => true,
+        ),
+        'yearsinBusinessAddress' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Less than 1',
+            1 => '1 - 2',
+            2 => '2 - 3',
+            3 => 'Greater than 3',
+            4 => 'Greater than 5',
+            5 => 'Greater than 10',
+          ),
+          'style' => 
+          array (
+            'Less than 1' => NULL,
+            '1 - 2' => NULL,
+            '2 - 3' => NULL,
+            'Greater than 3' => NULL,
+            'Greater than 5' => NULL,
+            'Greater than 10' => NULL,
+          ),
+          'default' => 'Less than 1',
+          'isCustom' => true,
+        ),
+        'anyCDSGProduct' => 
+        array (
+          'type' => 'checklist',
+          'storeArrayValues' => true,
+          'options' => 
+          array (
+            0 => 'Premier Coffee',
+            1 => 'Armo Fertilizer',
+            2 => 'Medicine / Pharmacy',
+            3 => 'Wah Lah',
+          ),
+          'isCustom' => true,
+        ),
+        'staffToManager' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'None',
+            1 => '1',
+            2 => '2 - 3',
+            3 => '3 - 5',
+            4 => '5 Plus',
+          ),
+          'style' => 
+          array (
+            1 => NULL,
+            'None' => NULL,
+            '2 - 3' => NULL,
+            '3 - 5' => NULL,
+            '5 Plus' => NULL,
+          ),
+          'default' => 'None',
+          'isCustom' => true,
+        ),
+        'shopHaveBranches' => 
+        array (
+          'notNull' => true,
+          'type' => 'bool',
+          'default' => true,
+          'isCustom' => true,
+        ),
+        'otherBranchesHave' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => '1',
+            1 => '2',
+            2 => '3',
+            3 => '4',
+            4 => '5',
+            5 => '5 Plus',
+          ),
+          'style' => 
+          array (
+            1 => NULL,
+            2 => NULL,
+            3 => NULL,
+            4 => NULL,
+            5 => NULL,
+            '5 Plus' => NULL,
+          ),
+          'default' => '1',
+          'isCustom' => true,
+        ),
+        'shopHaveMMServices' => 
+        array (
+          'notNull' => true,
+          'type' => 'bool',
+          'default' => true,
+          'isCustom' => true,
+        ),
+        'sellMMServices' => 
+        array (
+          'type' => 'checklist',
+          'storeArrayValues' => true,
+          'options' => 
+          array (
+            0 => 'Wave Money',
+            1 => 'True Money',
+            2 => 'MPT Money',
+            3 => 'KBZ Pay',
+            4 => 'AYA Pay',
+            5 => 'MyTel Pay',
+            6 => 'One Pay',
+            7 => 'Ooredoo Mpitesan',
+            8 => 'Ongo',
+            9 => 'Near Me',
+            10 => 'GET',
+            11 => 'OK $',
+          ),
+          'isCustom' => true,
+        ),
+        'investedLiquidity' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => 'Less than 2 Lakh',
+            1 => '2 - 3 Lakh',
+            2 => '3 - 5 Lakh',
+            3 => '5 Lakh Plus',
+            4 => '1 Million',
+            5 => '2 Million',
+          ),
+          'style' => 
+          array (
+            'Less than 2 Lakh' => NULL,
+            '2 - 3 Lakh' => NULL,
+            '3 - 5 Lakh' => NULL,
+            '5 Lakh Plus' => NULL,
+            '1 Million' => NULL,
+            '2 Million' => NULL,
+          ),
+          'default' => 'Less than 2 Lakh',
+          'isCustom' => true,
+        ),
+        'shopAcceptQRcode' => 
+        array (
+          'notNull' => true,
+          'type' => 'bool',
+          'default' => true,
+          'isCustom' => true,
+        ),
+        'investLiquidityinCC' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => '2 Lakh',
+            1 => '3 Lakh',
+            2 => '5 Lakh',
+            3 => '1 Million',
+            4 => '2 Million',
+          ),
+          'style' => 
+          array (
+            '2 Lakh' => NULL,
+            '3 Lakh' => NULL,
+            '5 Lakh' => NULL,
+            '1 Million' => NULL,
+            '2 Million' => NULL,
+          ),
+          'default' => '2 Lakh',
+          'isCustom' => true,
+        ),
+        'shopusedforBank' => 
+        array (
+          'type' => 'checklist',
+          'storeArrayValues' => true,
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'CB',
+            1 => 'KBZ',
+            2 => 'MCB',
+            3 => 'MAB',
+            4 => 'MEB',
+            5 => 'MOB',
+            6 => 'MTB',
+            7 => 'YOMA',
+            8 => 'AYA',
+            9 => 'AGD',
+            10 => 'GTB',
+            11 => 'Myawaddy',
+          ),
+          'isSorted' => true,
+          'isCustom' => true,
+        ),
+        'referFriends' => 
+        array (
+          'notNull' => true,
+          'type' => 'bool',
+          'default' => true,
+          'isCustom' => true,
+        ),
+        'yesforReferFriends' => 
+        array (
+          'type' => 'varchar',
+          'trim' => true,
+          'options' => 
+          array (
+          ),
+          'isCustom' => true,
+        ),
+        'startBusiness' => 
+        array (
+          'type' => 'checklist',
+          'storeArrayValues' => true,
+          'options' => 
+          array (
+            0 => 'Immediately',
+            1 => '1 Week',
+          ),
+          'maxCount' => 1,
+          'isCustom' => true,
+        ),
+        'startBusinessDate' => 
+        array (
+          'notNull' => false,
+          'type' => 'date',
+          'isCustom' => true,
+        ),
+        'billPaymentType' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => 'Online',
+            1 => 'Offline',
+          ),
+          'style' => 
+          array (
+            'Online' => NULL,
+            'Offline' => NULL,
+          ),
+          'default' => 'Online',
+          'isCustom' => true,
+        ),
+        'avgTicketSize' => 
+        array (
+          'type' => 'varchar',
+          'trim' => true,
+          'options' => 
+          array (
+          ),
+          'isCustom' => true,
+        ),
+        'settlement' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => 'Daily',
+            1 => 'Weekly',
+            2 => 'Monthly',
+          ),
+          'style' => 
+          array (
+            'Daily' => NULL,
+            'Weekly' => NULL,
+            'Monthly' => NULL,
+          ),
+          'default' => 'Daily',
+          'isCustom' => true,
+        ),
+        'settleMethod' => 
+        array (
+          'type' => 'checklist',
+          'storeArrayValues' => true,
+          'options' => 
+          array (
+            0 => 'Bank',
+            1 => 'Cash',
+            2 => 'Mobile Money',
+            3 => 'Other',
+          ),
+          'isCustom' => true,
+        ),
+        'customerFees' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => 'Surcharge Flat',
+            1 => 'Commission Flat',
+            2 => 'Surcharge Percent',
+            3 => 'Commission Percent',
+          ),
+          'style' => 
+          array (
+            'Surcharge Flat' => NULL,
+            'Commission Flat' => NULL,
+            'Surcharge Percent' => NULL,
+            'Commission Percent' => NULL,
+          ),
+          'default' => 'Surcharge Flat',
+          'isCustom' => true,
+        ),
+        'processingFees' => 
+        array (
+          'type' => 'enum',
+          'options' => 
+          array (
+            0 => 'Surcharge Flat',
+            1 => 'Commission Flat',
+            2 => 'Surcharge Percent',
+            3 => 'Commission Percent',
+          ),
+          'style' => 
+          array (
+            'Surcharge Flat' => NULL,
+            'Commission Flat' => NULL,
+            'Surcharge Percent' => NULL,
+            'Commission Percent' => NULL,
+          ),
+          'default' => 'Surcharge Flat',
+          'isCustom' => true,
+        ),
+        'annualTransCount' => 
+        array (
+          'type' => 'int',
+          'isCustom' => true,
+        ),
+        'streetAddress' => 
+        array (
+          'type' => 'text',
+          'required' => true,
+          'rowsMin' => 2,
+          'cutHeight' => 200,
           'isCustom' => true,
         ),
       ),

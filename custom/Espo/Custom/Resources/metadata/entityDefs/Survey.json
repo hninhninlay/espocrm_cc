@@ -44,6 +44,443 @@
             "padLength": 1,
             "prefix": "S",
             "isCustom": true
+        },
+        "accType": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Agent",
+                "Biller",
+                "Agent/Merchant",
+                "Merchant",
+                "Super-Agent"
+            ],
+            "style": {
+                "Agent": null,
+                "Biller": null,
+                "Agent/Merchant": null,
+                "Merchant": null,
+                "Super-Agent": null
+            },
+            "default": "Agent",
+            "isCustom": true
+        },
+        "division": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Yangon",
+                "Mandalay",
+                "Naypyitaw"
+            ],
+            "style": {
+                "Yangon": null,
+                "Mandalay": null,
+                "Naypyitaw": null
+            },
+            "default": "Yangon",
+            "isCustom": true
+        },
+        "township": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Alone",
+                "Bahan",
+                "Dagon",
+                "Sanchaung",
+                "Kyimyindine"
+            ],
+            "style": {
+                "Alone": null,
+                "Bahan": null,
+                "Dagon": null,
+                "Sanchaung": null,
+                "Kyimyindine": null
+            },
+            "default": "Alone",
+            "isCustom": true
+        },
+        "country": {
+            "type": "enum",
+            "options": [
+                "Min Ga Yu"
+            ],
+            "style": {
+                "Min Ga Yu": null
+            },
+            "default": "Min Ga Yu",
+            "isCustom": true
+        },
+        "businessCategory": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Retail",
+                "Whole Sale",
+                "Both"
+            ],
+            "style": {
+                "Retail": null,
+                "Whole Sale": null,
+                "Both": null
+            },
+            "default": "Retail",
+            "isCustom": true
+        },
+        "businessType": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Computer Sale & Repair",
+                "Electrical Goods",
+                "Furniture",
+                "Hardware",
+                "Liquor Shop",
+                "Mom & Pop Shop",
+                "Money Changer",
+                "Mini Mart",
+                "Mobile Handset",
+                "Printing/Photocopy",
+                "Pharmacy",
+                "Restaurant",
+                "Tea Shop"
+            ],
+            "style": {
+                "Computer Sale & Repair": null,
+                "Electrical Goods": null,
+                "Furniture": null,
+                "Hardware": null,
+                "Liquor Shop": null,
+                "Mom & Pop Shop": null,
+                "Money Changer": null,
+                "Mini Mart": null,
+                "Mobile Handset": null,
+                "Printing/Photocopy": null,
+                "Pharmacy": null,
+                "Restaurant": null,
+                "Tea Shop": null
+            },
+            "default": "Computer Sale & Repair",
+            "isCustom": true
+        },
+        "shopBuilding": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "required": true,
+            "options": [
+                "Owned",
+                "Rented"
+            ],
+            "maxCount": 1,
+            "isCustom": true
+        },
+        "avgDailySale": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Less than 100000",
+                "Greater than 100000",
+                "Greater than 200000",
+                "Greater than 500000"
+            ],
+            "style": {
+                "Less than 100000": null,
+                "Greater than 100000": null,
+                "Greater than 200000": null,
+                "Greater than 500000": null
+            },
+            "default": "Less than 100000",
+            "isCustom": true
+        },
+        "yearsinBusinessAddress": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Less than 1",
+                "1 - 2",
+                "2 - 3",
+                "Greater than 3",
+                "Greater than 5",
+                "Greater than 10"
+            ],
+            "style": {
+                "Less than 1": null,
+                "1 - 2": null,
+                "2 - 3": null,
+                "Greater than 3": null,
+                "Greater than 5": null,
+                "Greater than 10": null
+            },
+            "default": "Less than 1",
+            "isCustom": true
+        },
+        "anyCDSGProduct": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Premier Coffee",
+                "Armo Fertilizer",
+                "Medicine / Pharmacy",
+                "Wah Lah"
+            ],
+            "isCustom": true
+        },
+        "staffToManager": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "None",
+                "1",
+                "2 - 3",
+                "3 - 5",
+                "5 Plus"
+            ],
+            "style": {
+                "1": null,
+                "None": null,
+                "2 - 3": null,
+                "3 - 5": null,
+                "5 Plus": null
+            },
+            "default": "None",
+            "isCustom": true
+        },
+        "shopHaveBranches": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "isCustom": true
+        },
+        "otherBranchesHave": {
+            "type": "enum",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "5 Plus"
+            ],
+            "style": {
+                "1": null,
+                "2": null,
+                "3": null,
+                "4": null,
+                "5": null,
+                "5 Plus": null
+            },
+            "default": "1",
+            "isCustom": true
+        },
+        "shopHaveMMServices": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "isCustom": true
+        },
+        "sellMMServices": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Wave Money",
+                "True Money",
+                "MPT Money",
+                "KBZ Pay",
+                "AYA Pay",
+                "MyTel Pay",
+                "One Pay",
+                "Ooredoo Mpitesan",
+                "Ongo",
+                "Near Me",
+                "GET",
+                "OK $"
+            ],
+            "isCustom": true
+        },
+        "investedLiquidity": {
+            "type": "enum",
+            "options": [
+                "Less than 2 Lakh",
+                "2 - 3 Lakh",
+                "3 - 5 Lakh",
+                "5 Lakh Plus",
+                "1 Million",
+                "2 Million"
+            ],
+            "style": {
+                "Less than 2 Lakh": null,
+                "2 - 3 Lakh": null,
+                "3 - 5 Lakh": null,
+                "5 Lakh Plus": null,
+                "1 Million": null,
+                "2 Million": null
+            },
+            "default": "Less than 2 Lakh",
+            "isCustom": true
+        },
+        "shopAcceptQRcode": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "isCustom": true
+        },
+        "investLiquidityinCC": {
+            "type": "enum",
+            "options": [
+                "2 Lakh",
+                "3 Lakh",
+                "5 Lakh",
+                "1 Million",
+                "2 Million"
+            ],
+            "style": {
+                "2 Lakh": null,
+                "3 Lakh": null,
+                "5 Lakh": null,
+                "1 Million": null,
+                "2 Million": null
+            },
+            "default": "2 Lakh",
+            "isCustom": true
+        },
+        "shopusedforBank": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "required": true,
+            "options": [
+                "CB",
+                "KBZ",
+                "MCB",
+                "MAB",
+                "MEB",
+                "MOB",
+                "MTB",
+                "YOMA",
+                "AYA",
+                "AGD",
+                "GTB",
+                "Myawaddy"
+            ],
+            "isSorted": true,
+            "isCustom": true
+        },
+        "referFriends": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "isCustom": true
+        },
+        "yesforReferFriends": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "startBusiness": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Immediately",
+                "1 Week"
+            ],
+            "maxCount": 1,
+            "isCustom": true
+        },
+        "startBusinessDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
+        },
+        "billPaymentType": {
+            "type": "enum",
+            "options": [
+                "Online",
+                "Offline"
+            ],
+            "style": {
+                "Online": null,
+                "Offline": null
+            },
+            "default": "Online",
+            "isCustom": true
+        },
+        "avgTicketSize": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "settlement": {
+            "type": "enum",
+            "options": [
+                "Daily",
+                "Weekly",
+                "Monthly"
+            ],
+            "style": {
+                "Daily": null,
+                "Weekly": null,
+                "Monthly": null
+            },
+            "default": "Daily",
+            "isCustom": true
+        },
+        "settleMethod": {
+            "type": "checklist",
+            "storeArrayValues": true,
+            "options": [
+                "Bank",
+                "Cash",
+                "Mobile Money",
+                "Other"
+            ],
+            "isCustom": true
+        },
+        "customerFees": {
+            "type": "enum",
+            "options": [
+                "Surcharge Flat",
+                "Commission Flat",
+                "Surcharge Percent",
+                "Commission Percent"
+            ],
+            "style": {
+                "Surcharge Flat": null,
+                "Commission Flat": null,
+                "Surcharge Percent": null,
+                "Commission Percent": null
+            },
+            "default": "Surcharge Flat",
+            "isCustom": true
+        },
+        "processingFees": {
+            "type": "enum",
+            "options": [
+                "Surcharge Flat",
+                "Commission Flat",
+                "Surcharge Percent",
+                "Commission Percent"
+            ],
+            "style": {
+                "Surcharge Flat": null,
+                "Commission Flat": null,
+                "Surcharge Percent": null,
+                "Commission Percent": null
+            },
+            "default": "Surcharge Flat",
+            "isCustom": true
+        },
+        "annualTransCount": {
+            "type": "int",
+            "isCustom": true
+        },
+        "streetAddress": {
+            "type": "text",
+            "required": true,
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
         }
     },
     "links": {
