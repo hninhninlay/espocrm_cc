@@ -20494,6 +20494,26 @@ return array (
         'relation' => 'phoneNumberss',
         'foreign' => 'name',
       ),
+      'surveiesIds' => 
+      array (
+        'type' => 'jsonArray',
+        'notStorable' => true,
+        'isLinkMultipleIdList' => true,
+        'relation' => 'surveies',
+        'isUnordered' => true,
+        'attributeRole' => 'idList',
+        'fieldType' => 'linkMultiple',
+        'isLinkStub' => false,
+      ),
+      'surveiesNames' => 
+      array (
+        'type' => 'jsonObject',
+        'notStorable' => true,
+        'isLinkMultipleNameMap' => true,
+        'attributeRole' => 'nameMap',
+        'fieldType' => 'linkMultiple',
+        'isLinkStub' => false,
+      ),
       'isFollowed' => 
       array (
         'type' => 'varchar',
@@ -20700,6 +20720,13 @@ return array (
         'key' => 'phoneNumberssId',
         'foreignKey' => 'id',
         'foreign' => NULL,
+      ),
+      'surveies' => 
+      array (
+        'type' => 'hasMany',
+        'entity' => 'Survey',
+        'foreignKey' => 'leadId',
+        'foreign' => 'lead',
       ),
       'documents' => 
       array (
@@ -25316,7 +25343,7 @@ return array (
       'country' => 
       array (
         'type' => 'varchar',
-        'default' => 'Min Ga Yu',
+        'default' => '',
         'fieldType' => 'varchar',
         'len' => 255,
       ),
@@ -25371,7 +25398,7 @@ return array (
       array (
         'type' => 'bool',
         'notNull' => true,
-        'default' => true,
+        'default' => false,
         'fieldType' => 'bool',
       ),
       'otherBranchesHave' => 
@@ -25497,6 +25524,49 @@ return array (
         'type' => 'text',
         'fieldType' => 'text',
       ),
+      'contactPerson' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'companyName' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'mobile1' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'mobile2' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'position' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'Owner',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'website' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
+      'nrc' => 
+      array (
+        'type' => 'varchar',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
       'createdById' => 
       array (
         'dbType' => 'varchar',
@@ -25587,6 +25657,30 @@ return array (
         'attributeRole' => 'nameMap',
         'fieldType' => 'linkMultiple',
       ),
+      'leadId' => 
+      array (
+        'dbType' => 'varchar',
+        'len' => 24,
+        'type' => 'foreignId',
+        'index' => true,
+        'attributeRole' => 'id',
+        'fieldType' => 'link',
+        'notNull' => false,
+      ),
+      'leadName' => 
+      array (
+        'type' => 'foreign',
+        'notStorable' => false,
+        'attributeRole' => 'name',
+        'fieldType' => 'link',
+        'relation' => 'lead',
+        'foreign' => 
+        array (
+          0 => 'firstName',
+          1 => ' ',
+          2 => 'lastName',
+        ),
+      ),
       'emailsIds' => 
       array (
         'type' => 'jsonArray',
@@ -25638,6 +25732,14 @@ return array (
     ),
     'relations' => 
     array (
+      'lead' => 
+      array (
+        'type' => 'belongsTo',
+        'entity' => 'Lead',
+        'key' => 'leadId',
+        'foreignKey' => 'id',
+        'foreign' => 'surveies',
+      ),
       'emails' => 
       array (
         'type' => 'hasChildren',
@@ -25762,6 +25864,15 @@ return array (
           0 => 'assignedUserId',
         ),
         'key' => 'IDX_ASSIGNED_USER_ID',
+      ),
+      'leadId' => 
+      array (
+        'type' => 'index',
+        'columns' => 
+        array (
+          0 => 'leadId',
+        ),
+        'key' => 'IDX_LEAD_ID',
       ),
     ),
     'collection' => 

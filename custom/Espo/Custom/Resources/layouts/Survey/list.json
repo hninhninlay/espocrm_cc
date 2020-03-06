@@ -1,5 +1,14 @@
 [
     {
+        "name": "contactPerson"
+    },
+    {
+        "name": "nrc"
+    },
+    {
+        "name": "mobile1"
+    },
+    {
         "name": "accType"
     },
     {

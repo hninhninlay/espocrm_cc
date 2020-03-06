@@ -48,7 +48,8 @@
         "gPSLocationAttachment": "GPS Location Attachment",
         "walletAppSurvey": "Wallet App Survey",
         "phoneNumberss": "Phone Number Screen Shot",
-        "leadID": "LeadID"
+        "leadID": "LeadID",
+        "surveies": "Surveies"
     },
     "options": {
         "businessCategory": {
@@ -255,5 +256,8 @@
             "Commission Percent": "Commission Percent",
             "": ""
         }
+    },
+    "links": {
+        "surveies": "Surveies"
     }
 }

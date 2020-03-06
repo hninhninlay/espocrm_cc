@@ -4365,6 +4365,7 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       'walletAppSurvey' => 'Wallet App Survey',
       'phoneNumberss' => 'Phone Number Screen Shot',
       'leadID' => 'LeadID',
+      'surveies' => 'Surveies',
     ),
     'links' => 
     array (
@@ -4376,6 +4377,7 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       'createdOpportunity' => 'Opportunity',
       'cases' => 'Cases',
       'documents' => 'Documents',
+      'surveies' => 'Surveies',
     ),
     'options' => 
     array (
@@ -4962,12 +4964,21 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       'processingFees' => 'Processing Fees',
       'annualTransCount' => 'Annual Transaction Count',
       'streetAddress' => 'Street Address',
+      'contactPerson' => 'Contact Person',
+      'companyName' => 'Company Name',
+      'mobile1' => 'Mobile 1',
+      'mobile2' => 'Mobile 2',
+      'lead' => 'Lead',
+      'position' => 'Position',
+      'website' => 'Website',
+      'nrc' => 'NRC',
     ),
     'links' => 
     array (
       'meetings' => 'Meetings',
       'calls' => 'Calls',
       'tasks' => 'Tasks',
+      'lead' => 'Lead',
     ),
     'labels' => 
     array (
@@ -5000,6 +5011,7 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       'country' => 
       array (
         'Min Ga Yu' => 'Min Ga Yu',
+        '' => '',
       ),
       'businessCategory' => 
       array (
@@ -5151,6 +5163,11 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
         'Commission Flat' => 'Commission Flat',
         'Surcharge Percent' => 'Surcharge Percent',
         'Commission Percent' => 'Commission Percent',
+      ),
+      'position' => 
+      array (
+        'Owner' => 'Owner',
+        'Manager' => 'Manager',
       ),
     ),
   ),

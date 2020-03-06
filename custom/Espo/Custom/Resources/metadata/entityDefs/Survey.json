@@ -2,8 +2,9 @@
     "fields": {
         "name": {
             "type": "varchar",
-            "required": true,
-            "trim": true
+            "required": false,
+            "trim": true,
+            "options": []
         },
         "description": {
             "type": "text"
@@ -104,12 +105,14 @@
         "country": {
             "type": "enum",
             "options": [
+                "",
                 "Min Ga Yu"
             ],
             "style": {
+                "": null,
                 "Min Ga Yu": null
             },
-            "default": "Min Ga Yu",
+            "default": "",
             "isCustom": true
         },
         "businessCategory": {
@@ -249,7 +252,7 @@
         "shopHaveBranches": {
             "notNull": true,
             "type": "bool",
-            "default": true,
+            "default": false,
             "isCustom": true
         },
         "otherBranchesHave": {
@@ -481,6 +484,61 @@
             "rowsMin": 2,
             "cutHeight": 200,
             "isCustom": true
+        },
+        "contactPerson": {
+            "type": "varchar",
+            "required": true,
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "companyName": {
+            "type": "varchar",
+            "required": true,
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "mobile1": {
+            "type": "varchar",
+            "required": true,
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "mobile2": {
+            "type": "varchar",
+            "trim": true,
+            "options": [],
+            "isCustom": true
+        },
+        "lead": {
+            "type": "link"
+        },
+        "position": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Owner",
+                "Manager"
+            ],
+            "style": {
+                "Owner": null,
+                "Manager": null
+            },
+            "default": "Owner",
+            "isCustom": true
+        },
+        "website": {
+            "type": "url",
+            "isCustom": true
+        },
+        "nrc": {
+            "type": "varchar",
+            "required": true,
+            "trim": true,
+            "options": [],
+            "isCustom": true
         }
     },
     "links": {
@@ -525,6 +583,13 @@
             "entity": "Email",
             "foreign": "parent",
             "layoutRelationshipsDisabled": true
+        },
+        "lead": {
+            "type": "belongsTo",
+            "foreign": "surveies",
+            "entity": "Lead",
+            "audited": false,
+            "isCustom": true
         }
     },
     "collection": {

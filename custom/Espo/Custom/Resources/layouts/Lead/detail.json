@@ -5,164 +5,8 @@
                 {
                     "name": "leadID"
                 },
-                {
-                    "name": "accountType"
-                }
-            ],
-            [
-                {
-                    "name": "name"
-                },
-                {
-                    "name": "accountName"
-                }
-            ],
-            [
-                {
-                    "name": "nrc"
-                },
-                {
-                    "name": "title"
-                }
-            ],
-            [
-                {
-                    "name": "emailAddress"
-                },
-                {
-                    "name": "phoneNumber"
-                }
-            ],
-            [
-                {
-                    "name": "website"
-                },
-                {
-                    "name": "companyName"
-                }
-            ],
-            [
-                {
-                    "name": "division"
-                },
-                {
-                    "name": "township"
-                }
-            ],
-            [
-                {
-                    "name": "country"
-                },
                 false
             ],
-            [
-                {
-                    "name": "detailAddress"
-                },
-                false
-            ]
-        ],
-        "style": "default",
-        "label": "Overview"
-    },
-    {
-        "rows": [
-            [
-                {
-                    "name": "businessCategory"
-                },
-                {
-                    "name": "businessType"
-                }
-            ],
-            [
-                {
-                    "name": "building"
-                },
-                {
-                    "name": "avgDailySale"
-                }
-            ],
-            [
-                {
-                    "name": "businessAtAddress"
-                },
-                {
-                    "name": "sellCDSGProduct"
-                }
-            ],
-            [
-                {
-                    "name": "stafftoManager"
-                }
-            ],
-            [
-                {
-                    "name": "haveBranches"
-                },
-                {
-                    "name": "haveOtherBranches"
-                }
-            ],
-            [
-                {
-                    "name": "haveMobileMoneyService"
-                }
-            ],
-            [
-                {
-                    "name": "sellWhichMobileMoney"
-                }
-            ],
-            [
-                {
-                    "name": "liquidity"
-                }
-            ],
-            [
-                {
-                    "name": "acceptQRcode"
-                }
-            ],
-            [
-                {
-                    "name": "investLiquidity"
-                }
-            ],
-            [
-                {
-                    "name": "useWhichBank"
-                }
-            ],
-            [
-                {
-                    "name": "referFriends"
-                }
-            ],
-            [
-                {
-                    "name": "referFriendsText"
-                },
-                false
-            ],
-            [
-                {
-                    "name": "startBusiness"
-                }
-            ],
-            [
-                {
-                    "name": "startBusinessDate"
-                },
-                false
-            ]
-        ],
-        "style": "default",
-        "dynamicLogicVisible": null,
-        "customLabel": "Survey"
-    },
-    {
-        "rows": [
             [
                 {
                     "name": "status"
@@ -181,49 +25,20 @@
             ],
             [
                 {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
                     "name": "remarks"
                 }
             ]
         ],
         "style": "default",
-        "label": "Details"
-    },
-    {
-        "rows": [
-            [
-                {
-                    "name": "billPaymentType"
-                },
-                {
-                    "name": "ticketSize"
-                }
-            ],
-            [
-                {
-                    "name": "settlement"
-                },
-                {
-                    "name": "settleMethod"
-                }
-            ],
-            [
-                {
-                    "name": "customerFees"
-                },
-                {
-                    "name": "processFees"
-                }
-            ],
-            [
-                {
-                    "name": "annualTransCount"
-                },
-                false
-            ]
-        ],
-        "style": "default",
-        "dynamicLogicVisible": null,
-        "customLabel": "Biller Information"
+        "label": "Overview"
     },
     {
         "rows": [

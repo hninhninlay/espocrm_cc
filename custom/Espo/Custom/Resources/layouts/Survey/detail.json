@@ -9,10 +9,24 @@
             ],
             [
                 {
-                    "name": "businessCategory"
+                    "name": "contactPerson"
                 },
                 {
-                    "name": "businessType"
+                    "name": "nrc"
+                }
+            ],
+            [
+                {
+                    "name": "position"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "mobile1"
+                },
+                {
+                    "name": "mobile2"
                 }
             ],
             [
@@ -28,6 +42,29 @@
                     "name": "country"
                 },
                 false
+            ],
+            [
+                {
+                    "name": "website"
+                },
+                {
+                    "name": "companyName"
+                }
+            ]
+        ],
+        "style": "default",
+        "dynamicLogicVisible": null,
+        "customLabel": "Personal Detail"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "businessCategory"
+                },
+                {
+                    "name": "businessType"
+                }
             ],
             [
                 {
@@ -67,9 +104,13 @@
                 {
                     "name": "shopHaveMMServices"
                 },
+                false
+            ],
+            [
                 {
                     "name": "sellMMServices"
-                }
+                },
+                false
             ],
             [
                 {
@@ -83,9 +124,13 @@
                 {
                     "name": "shopAcceptQRcode"
                 },
+                false
+            ],
+            [
                 {
                     "name": "shopusedforBank"
-                }
+                },
+                false
             ],
             [
                 {
@@ -111,7 +156,8 @@
             ]
         ],
         "style": "default",
-        "label": "Overview"
+        "dynamicLogicVisible": null,
+        "customLabel": "Survey"
     },
     {
         "rows": [

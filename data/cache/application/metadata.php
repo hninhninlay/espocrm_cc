@@ -6794,7 +6794,8 @@ return array (
           ),
           'otherBranchesHave' => 
           array (
-            'visible' => 
+            'visible' => NULL,
+            'required' => 
             array (
               'conditionGroup' => 
               array (
@@ -6805,13 +6806,13 @@ return array (
                 ),
               ),
             ),
-            'required' => 
+            'readOnly' => 
             array (
               'conditionGroup' => 
               array (
                 0 => 
                 array (
-                  'type' => 'isTrue',
+                  'type' => 'isFalse',
                   'attribute' => 'shopHaveBranches',
                 ),
               ),
@@ -19957,6 +19958,15 @@ return array (
           'prefix' => 'L',
           'isCustom' => true,
         ),
+        'surveies' => 
+        array (
+          'type' => 'linkMultiple',
+          'layoutDetailDisabled' => false,
+          'layoutMassUpdateDisabled' => false,
+          'noLoad' => false,
+          'importDisabled' => false,
+          'isCustom' => true,
+        ),
         'middleName' => 
         array (
           'type' => 'varchar',
@@ -20209,6 +20219,14 @@ return array (
           'entity' => 'Attachment',
           'skipOrmDefs' => true,
           'disabled' => true,
+        ),
+        'surveies' => 
+        array (
+          'type' => 'hasMany',
+          'foreign' => 'lead',
+          'entity' => 'Survey',
+          'audited' => false,
+          'isCustom' => true,
         ),
       ),
       'convertEntityList' => 
@@ -22261,8 +22279,11 @@ return array (
         'name' => 
         array (
           'type' => 'varchar',
-          'required' => true,
+          'required' => false,
           'trim' => true,
+          'options' => 
+          array (
+          ),
         ),
         'description' => 
         array (
@@ -22382,13 +22403,15 @@ return array (
           'type' => 'enum',
           'options' => 
           array (
-            0 => 'Min Ga Yu',
+            0 => '',
+            1 => 'Min Ga Yu',
           ),
           'style' => 
           array (
+            '' => NULL,
             'Min Ga Yu' => NULL,
           ),
-          'default' => 'Min Ga Yu',
+          'default' => '',
           'isCustom' => true,
         ),
         'businessCategory' => 
@@ -22548,7 +22571,7 @@ return array (
         array (
           'notNull' => true,
           'type' => 'bool',
-          'default' => true,
+          'default' => false,
           'isCustom' => true,
         ),
         'otherBranchesHave' => 
@@ -22822,6 +22845,81 @@ return array (
           'cutHeight' => 200,
           'isCustom' => true,
         ),
+        'contactPerson' => 
+        array (
+          'type' => 'varchar',
+          'required' => true,
+          'trim' => true,
+          'options' => 
+          array (
+          ),
+          'isCustom' => true,
+        ),
+        'companyName' => 
+        array (
+          'type' => 'varchar',
+          'required' => true,
+          'trim' => true,
+          'options' => 
+          array (
+          ),
+          'isCustom' => true,
+        ),
+        'mobile1' => 
+        array (
+          'type' => 'varchar',
+          'required' => true,
+          'trim' => true,
+          'options' => 
+          array (
+          ),
+          'isCustom' => true,
+        ),
+        'mobile2' => 
+        array (
+          'type' => 'varchar',
+          'trim' => true,
+          'options' => 
+          array (
+          ),
+          'isCustom' => true,
+        ),
+        'lead' => 
+        array (
+          'type' => 'link',
+        ),
+        'position' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'Owner',
+            1 => 'Manager',
+          ),
+          'style' => 
+          array (
+            'Owner' => NULL,
+            'Manager' => NULL,
+          ),
+          'default' => 'Owner',
+          'isCustom' => true,
+        ),
+        'website' => 
+        array (
+          'type' => 'url',
+          'isCustom' => true,
+        ),
+        'nrc' => 
+        array (
+          'type' => 'varchar',
+          'required' => true,
+          'trim' => true,
+          'options' => 
+          array (
+          ),
+          'isCustom' => true,
+        ),
       ),
       'links' => 
       array (
@@ -22874,6 +22972,14 @@ return array (
           'entity' => 'Email',
           'foreign' => 'parent',
           'layoutRelationshipsDisabled' => true,
+        ),
+        'lead' => 
+        array (
+          'type' => 'belongsTo',
+          'foreign' => 'surveies',
+          'entity' => 'Lead',
+          'audited' => false,
+          'isCustom' => true,
         ),
       ),
       'collection' => 

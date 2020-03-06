@@ -5372,7 +5372,8 @@ return (object) [
                         ]
                     ],
                     'otherBranchesHave' => (object) [
-                        'visible' => (object) [
+                        'visible' => NULL,
+                        'required' => (object) [
                             'conditionGroup' => [
                                 0 => (object) [
                                     'type' => 'isTrue',
@@ -5380,10 +5381,10 @@ return (object) [
                                 ]
                             ]
                         ],
-                        'required' => (object) [
+                        'readOnly' => (object) [
                             'conditionGroup' => [
                                 0 => (object) [
-                                    'type' => 'isTrue',
+                                    'type' => 'isFalse',
                                     'attribute' => 'shopHaveBranches'
                                 ]
                             ]
@@ -16093,6 +16094,14 @@ return (object) [
                     'prefix' => 'L',
                     'isCustom' => true
                 ],
+                'surveies' => (object) [
+                    'type' => 'linkMultiple',
+                    'layoutDetailDisabled' => false,
+                    'layoutMassUpdateDisabled' => false,
+                    'noLoad' => false,
+                    'importDisabled' => false,
+                    'isCustom' => true
+                ],
                 'middleName' => (object) [
                     'type' => 'varchar',
                     'trim' => true,
@@ -16313,6 +16322,13 @@ return (object) [
                     'entity' => 'Attachment',
                     'skipOrmDefs' => true,
                     'disabled' => true
+                ],
+                'surveies' => (object) [
+                    'type' => 'hasMany',
+                    'foreign' => 'lead',
+                    'entity' => 'Survey',
+                    'audited' => false,
+                    'isCustom' => true
                 ]
             ],
             'convertEntityList' => [
@@ -17970,8 +17986,11 @@ return (object) [
             'fields' => (object) [
                 'name' => (object) [
                     'type' => 'varchar',
-                    'required' => true,
-                    'trim' => true
+                    'required' => false,
+                    'trim' => true,
+                    'options' => [
+                        
+                    ]
                 ],
                 'description' => (object) [
                     'type' => 'text'
@@ -18072,12 +18091,14 @@ return (object) [
                 'country' => (object) [
                     'type' => 'enum',
                     'options' => [
-                        0 => 'Min Ga Yu'
+                        0 => '',
+                        1 => 'Min Ga Yu'
                     ],
                     'style' => (object) [
+                        '' => NULL,
                         'Min Ga Yu' => NULL
                     ],
-                    'default' => 'Min Ga Yu',
+                    'default' => '',
                     'isCustom' => true
                 ],
                 'businessCategory' => (object) [
@@ -18217,7 +18238,7 @@ return (object) [
                 'shopHaveBranches' => (object) [
                     'notNull' => true,
                     'type' => 'bool',
-                    'default' => true,
+                    'default' => false,
                     'isCustom' => true
                 ],
                 'otherBranchesHave' => (object) [
@@ -18453,6 +18474,71 @@ return (object) [
                     'rowsMin' => 2,
                     'cutHeight' => 200,
                     'isCustom' => true
+                ],
+                'contactPerson' => (object) [
+                    'type' => 'varchar',
+                    'required' => true,
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'companyName' => (object) [
+                    'type' => 'varchar',
+                    'required' => true,
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'mobile1' => (object) [
+                    'type' => 'varchar',
+                    'required' => true,
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'mobile2' => (object) [
+                    'type' => 'varchar',
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
+                ],
+                'lead' => (object) [
+                    'type' => 'link'
+                ],
+                'position' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'Owner',
+                        1 => 'Manager'
+                    ],
+                    'style' => (object) [
+                        'Owner' => NULL,
+                        'Manager' => NULL
+                    ],
+                    'default' => 'Owner',
+                    'isCustom' => true
+                ],
+                'website' => (object) [
+                    'type' => 'url',
+                    'isCustom' => true
+                ],
+                'nrc' => (object) [
+                    'type' => 'varchar',
+                    'required' => true,
+                    'trim' => true,
+                    'options' => [
+                        
+                    ],
+                    'isCustom' => true
                 ]
             ],
             'links' => (object) [
@@ -18497,6 +18583,13 @@ return (object) [
                     'entity' => 'Email',
                     'foreign' => 'parent',
                     'layoutRelationshipsDisabled' => true
+                ],
+                'lead' => (object) [
+                    'type' => 'belongsTo',
+                    'foreign' => 'surveies',
+                    'entity' => 'Lead',
+                    'audited' => false,
+                    'isCustom' => true
                 ]
             ],
             'collection' => (object) [

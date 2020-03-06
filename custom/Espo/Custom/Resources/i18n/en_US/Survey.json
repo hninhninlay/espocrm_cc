@@ -31,12 +31,21 @@
         "customerFees": "Customer Fees",
         "processingFees": "Processing Fees",
         "annualTransCount": "Annual Transaction Count",
-        "streetAddress": "Street Address"
+        "streetAddress": "Street Address",
+        "contactPerson": "Contact Person",
+        "companyName": "Company Name",
+        "mobile1": "Mobile 1",
+        "mobile2": "Mobile 2",
+        "lead": "Lead",
+        "position": "Position",
+        "website": "Website",
+        "nrc": "NRC"
     },
     "links": {
         "meetings": "Meetings",
         "calls": "Calls",
-        "tasks": "Tasks"
+        "tasks": "Tasks",
+        "lead": "Lead"
     },
     "labels": {
         "Create Survey": "Create Survey"
@@ -62,7 +71,8 @@
             "Kyimyindine": "Kyimyindine"
         },
         "country": {
-            "Min Ga Yu": "Min Ga Yu"
+            "Min Ga Yu": "Min Ga Yu",
+            "": ""
         },
         "businessCategory": {
             "Retail": "Retail",
@@ -196,6 +206,10 @@
             "Commission Flat": "Commission Flat",
             "Surcharge Percent": "Surcharge Percent",
             "Commission Percent": "Commission Percent"
+        },
+        "position": {
+            "Owner": "Owner",
+            "Manager": "Manager"
         }
     }
 }

@@ -41,7 +41,8 @@
                 }
             },
             "otherBranchesHave": {
-                "visible": {
+                "visible": null,
+                "required": {
                     "conditionGroup": [
                         {
                             "type": "isTrue",
@@ -49,10 +50,10 @@
                         }
                     ]
                 },
-                "required": {
+                "readOnly": {
                     "conditionGroup": [
                         {
-                            "type": "isTrue",
+                            "type": "isFalse",
                             "attribute": "shopHaveBranches"
                         }
                     ]
