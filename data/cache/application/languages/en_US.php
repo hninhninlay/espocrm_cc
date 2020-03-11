@@ -4972,6 +4972,7 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       'position' => 'Position',
       'website' => 'Website',
       'nrc' => 'NRC',
+      'sType' => 'SType',
     ),
     'links' => 
     array (
@@ -5168,6 +5169,11 @@ Disabled: Access to scopes will be allowed if it\'s not specified in roles.',
       array (
         'Owner' => 'Owner',
         'Manager' => 'Manager',
+      ),
+      'sType' => 
+      array (
+        'type1' => 'type1',
+        'type2' => 'type2',
       ),
     ),
   ),

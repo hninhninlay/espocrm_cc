@@ -39,7 +39,8 @@
         "lead": "Lead",
         "position": "Position",
         "website": "Website",
-        "nrc": "NRC"
+        "nrc": "NRC",
+        "sType": "SType"
     },
     "links": {
         "meetings": "Meetings",
@@ -210,6 +211,10 @@
         "position": {
             "Owner": "Owner",
             "Manager": "Manager"
+        },
+        "sType": {
+            "type1": "type1",
+            "type2": "type2"
         }
     }
 }

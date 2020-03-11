@@ -539,6 +539,20 @@
             "trim": true,
             "options": [],
             "isCustom": true
+        },
+        "sType": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "type1",
+                "type2"
+            ],
+            "style": {
+                "type1": null,
+                "type2": null
+            },
+            "default": "type1",
+            "isCustom": true
         }
     },
     "links": {

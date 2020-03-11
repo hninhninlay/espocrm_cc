@@ -18539,6 +18539,20 @@ return (object) [
                         
                     ],
                     'isCustom' => true
+                ],
+                'sType' => (object) [
+                    'type' => 'enum',
+                    'required' => true,
+                    'options' => [
+                        0 => 'type1',
+                        1 => 'type2'
+                    ],
+                    'style' => (object) [
+                        'type1' => NULL,
+                        'type2' => NULL
+                    ],
+                    'default' => 'type1',
+                    'isCustom' => true
                 ]
             ],
             'links' => (object) [

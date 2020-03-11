@@ -5,7 +5,9 @@
                 {
                     "name": "surveyID"
                 },
-                false
+                {
+                    "name": "sType"
+                }
             ],
             [
                 {

@@ -25567,6 +25567,13 @@ return array (
         'fieldType' => 'varchar',
         'len' => 255,
       ),
+      'sType' => 
+      array (
+        'type' => 'varchar',
+        'default' => 'type1',
+        'fieldType' => 'varchar',
+        'len' => 255,
+      ),
       'createdById' => 
       array (
         'dbType' => 'varchar',

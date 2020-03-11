@@ -1,15 +1,15 @@
 [
     {
-        "name": "name",
+        "name": "surveyID",
         "link": true
-    },
-    {
-        "name": "surveyID"
     },
     {
         "name": "contactPerson"
     },
     {
         "name": "accType"
+    },
+    {
+        "name": "sType"
     }
 ]

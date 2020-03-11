@@ -22920,6 +22920,23 @@ return array (
           ),
           'isCustom' => true,
         ),
+        'sType' => 
+        array (
+          'type' => 'enum',
+          'required' => true,
+          'options' => 
+          array (
+            0 => 'type1',
+            1 => 'type2',
+          ),
+          'style' => 
+          array (
+            'type1' => NULL,
+            'type2' => NULL,
+          ),
+          'default' => 'type1',
+          'isCustom' => true,
+        ),
       ),
       'links' => 
       array (
